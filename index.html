@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramesha Dasangi | Software Engineering Student (NIBM)</title>
+  <meta name="description" content="Portfolio of Ramesha Dasangi – Software Engineering Student at NIBM Sri Lanka. Projects in Java, Android Development, Web Platforms, and Machine Learning." />
+  <meta name="keywords" content="Ramesha Dasangi, Software Engineering Student, NIBM, Sri Lanka, Java, Android, Web Development, Machine Learning, Portfolio, GitHub" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-body: #f8fafc;
+      --bg-white: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+
+      --text-main: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-subtle: #eff6ff;
+      --primary-border: #bfdbfe;
+
+      --emerald: #059669;
+      --emerald-subtle: #ecfdf5;
+      --emerald-border: #a7f3d0;
+
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+      --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Paragraph Justification & Typography */
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .nav-avatar-mini {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border-color);
+    }
+
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .nav-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-outline {
+      background-color: var(--bg-white);
+      color: var(--text-main);
+      border-color: var(--border-color);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--bg-subtle);
+      border-color: #cbd5e1;
+      color: var(--text-main);
+    }
+
+    .btn-github {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    .btn-github:hover {
+      background-color: #1e293b;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+    }
+
+    .btn-sm {
+      padding: 7px 14px;
+      font-size: 0.84rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--text-main);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 76px 0 64px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-body) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.22fr 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--emerald-subtle);
+      border: 1px solid var(--emerald-border);
+      color: var(--emerald);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-family: var(--font-heading);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--emerald);
+      position: relative;
+    }
+
+    .status-dot::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 2px solid var(--emerald);
+      opacity: 0.4;
+      animation: ripple 2s infinite ease-out;
+    }
+
+    @keyframes ripple {
+      0% { transform: scale(0.8); opacity: 0.8; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.3rem, 4.3vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      line-height: 1.4;
+    }
+
+    .hero-bio {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 580px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-color);
+      width: 100%;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .meta-item svg {
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Hero Image */
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo-card {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      background: var(--bg-white);
+      border-radius: var(--radius-xl);
+      padding: 14px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    .photo-inner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.12;
+      border-radius: calc(var(--radius-xl) - 4px);
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .photo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .photo-card:hover .photo-inner img {
+      transform: scale(1.02);
+    }
+
+    .photo-badge {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--text-main);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    /* Sections */
+    section {
+      padding: 76px 0;
+    }
+
+    .section-header {
+      margin-bottom: 46px;
+    }
+
+    .section-tag {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-heading {
+      font-family: var(--font-heading);
+      font-size: 2.05rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .section-lead {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 660px;
+      line-height: 1.65;
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+      line-height: 1.78;
+      margin-bottom: 18px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .about-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background-color: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      background-color: var(--bg-white);
+      border-color: var(--primary-border);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .stat-icon {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .stat-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background-color: var(--bg-body);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .skills-category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .skill-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .skill-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-md);
+      background-color: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .skill-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .tech-pill:hover {
+      background-color: var(--primary-subtle);
+      border-color: var(--primary-border);
+      color: var(--primary-hover);
+    }
+
+    /* Projects Section */
+    .projects-section {
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .project-featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-header-bar {
+      padding: 18px 24px;
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-category-tag {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: var(--primary-subtle);
+      border: 1px solid var(--primary-border);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .project-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .project-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .project-summary {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .project-metrics {
+      background-color: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-metrics strong {
+      color: var(--primary);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .project-tag {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      background-color: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .project-footer {
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .project-links-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .project-link:hover {
+      color: var(--primary-hover);
+      gap: 8px;
+    }
+
+    .project-link-gh {
+      color: var(--text-main);
+    }
+
+    .project-link-gh:hover {
+      color: var(--primary);
+    }
+
+    .gallery-nav-btn {
+      padding: 5px 11px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-white);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .gallery-nav-btn:hover {
+      background: var(--bg-subtle);
+      border-color: #cbd5e1;
+      color: var(--text-main);
+    }
+
+    .gallery-nav-btn.active {
+      background: var(--primary-subtle);
+      border-color: var(--primary-border);
+      color: var(--primary);
+    }
+
+    /* Experience & Education */
+    .journey-section {
+      background-color: var(--bg-body);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .timeline-column-title {
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 14px;
+      bottom: 20px;
+      width: 2px;
+      background-color: var(--border-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 44px;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--bg-white);
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .timeline-marker-inner {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+
+    .timeline-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .timeline-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .timeline-role {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .timeline-place {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .timeline-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 12px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .timeline-tag {
+      font-size: 0.74rem;
+      padding: 3px 8px;
+      background-color: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .contact-card-box {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 44px;
+    }
+
+    .contact-left h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .contact-left p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.72;
+      margin-bottom: 26px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      border-color: var(--primary-border);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background-color: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon-gh {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+
+    .contact-icon-li {
+      background-color: #0077b5;
+      color: #ffffff;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .contact-val {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      transition: var(--transition);
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .form-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--bg-white);
+      padding: 32px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-content {
+        align-items: flex-start;
+      }
+
+      .hero-buttons {
+        justify-content: flex-start;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card-box {
+        grid-template-columns: 1fr;
+        padding: 28px;
+      }
+
+      .project-featured {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-white);
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px;
+        box-shadow: var(--shadow-lg);
+        gap: 16px;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .about-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand" id="brand-link">
+        <img src="profile.jpg" alt="Ramesha Dasangi" class="nav-avatar-mini" />
+        <div class="nav-brand-text">
+          <span class="nav-name">Ramesha Dasangi</span>
+          <span class="nav-role">Software Engineering Student</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm" id="nav-github-btn" title="GitHub Profile">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="nav-linkedin-btn">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm" id="nav-contact-btn">Get In Touch</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Open to Software Engineering Internships</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span>Ramesha Dasangi</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Software Engineering Student at NIBM · Mobile, Web & Machine Learning Solutions
+        </p>
+
+        <p class="hero-bio">
+          I am a dedicated Software Engineering student pursuing my Higher National Diploma (HND) at the National Institute of Business Management (NIBM), Sri Lanka. I have completed my Diploma in Software Engineering and enjoy turning ideas into reliable, practical software solutions across Java, Android, Web platforms, and applied Machine Learning models.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" id="hero-view-work">
+            View My Projects
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+          </a>
+          <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="hero-github">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="hero-linkedin">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Galle, Sri Lanka
+          </div>
+          <div class="meta-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            NIBM HND Candidate
+          </div>
+          <div class="meta-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:rameshadasangi4@gmail.com" style="color:inherit; text-decoration:none; font-weight:600;">rameshadasangi4@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="photo-card">
+          <div class="photo-inner">
+            <img src="profile.jpg" alt="Ramesha Dasangi" id="hero-profile-image" />
+          </div>
+          <div class="photo-badge">
+            <span class="badge-dot"></span>
+            <span>Software Engineering Student · NIBM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-heading">Passionate about building reliable, practical software</h2>
+        <p class="section-lead">A glimpse into my academic journey, core values, and approach to software development.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a motivated Software Engineering student at the <strong>National Institute of Business Management (NIBM)</strong>. Having successfully completed my Diploma in Software Engineering, I am now continuing my studies in the Higher National Diploma (HND) program to further develop my technical capabilities and prepare for real-world software engineering roles.
+          </p>
+          <p>
+            My engineering journey is driven by curiosity, structured logic, and practical problem-solving. Over the past several years, I have built academic and hands-on projects ranging from predictive machine learning models using Flask REST APIs to native Android applications integrated with Firebase, full-stack database platforms using PHP and MySQL, and foundational systems programming in C and Java.
+          </p>
+          <p>
+            Alongside my studies, I have worked as an independent mathematics tutor for over 3 years. This experience has strengthened my analytical mindset, patience, and ability to communicate complex concepts clearly — skills that directly benefit my collaboration and code design as a software developer.
+          </p>
+        </div>
+
+        <div class="about-cards-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-number">NIBM</div>
+            <div class="stat-label">Higher National Diploma</div>
+            <div class="stat-desc">Software Engineering (Current)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📜</div>
+            <div class="stat-number">Diploma</div>
+            <div class="stat-label">Software Engineering</div>
+            <div class="stat-desc">Completed with strong foundation</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">💻</div>
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Projects Built</div>
+            <div class="stat-desc">ML, Android, Web & Systems</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📐</div>
+            <div class="stat-number">3+ Yrs</div>
+            <div class="stat-label">Math & Logic Tutoring</div>
+            <div class="stat-desc">Analytical problem-solving</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Competencies</span>
+        <h2 class="section-heading">Technologies & Technical Skills</h2>
+        <p class="section-lead">A structured overview of the tools, languages, and frameworks I use to build solutions.</p>
+      </div>
+
+      <div class="skills-category-grid">
+        <!-- Languages -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">⚡</div>
+            <h3 class="skill-card-title">Programming Languages</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Dart</span>
+            <span class="tech-pill">C</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">C#</span>
+            <span class="tech-pill">PHP</span>
+            <span class="tech-pill">SQL</span>
+          </div>
+        </div>
+
+        <!-- Mobile & Web -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">📱</div>
+            <h3 class="skill-card-title">Mobile & Web Development</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">Android Studio</span>
+            <span class="tech-pill">Firebase Realtime DB</span>
+            <span class="tech-pill">HTML5 & CSS3</span>
+            <span class="tech-pill">Flask (Python)</span>
+            <span class="tech-pill">Bootstrap 5</span>
+            <span class="tech-pill">OSMDroid (Maps)</span>
+            <span class="tech-pill">RESTful APIs</span>
+          </div>
+        </div>
+
+        <!-- ML & Data -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">📊</div>
+            <h3 class="skill-card-title">Data Science & Machine Learning</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">Random Forest</span>
+            <span class="tech-pill">Decision Trees</span>
+            <span class="tech-pill">K-Means Clustering</span>
+            <span class="tech-pill">Linear Regression</span>
+            <span class="tech-pill">Chart.js Visualizations</span>
+            <span class="tech-pill">Predictive Analytics</span>
+            <span class="tech-pill">Statistical Modeling</span>
+          </div>
+        </div>
+
+        <!-- Tools & Practices -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">🛠️</div>
+            <h3 class="skill-card-title">Tools & Engineering Practices</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">Git & GitHub</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">OOP Architecture</span>
+            <span class="tech-pill">Figma UI Design</span>
+            <span class="tech-pill">UML Diagrams</span>
+            <span class="tech-pill">Network Design & VLAN</span>
+            <span class="tech-pill">IoT & Robotics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-heading">Featured Projects</h2>
+        <p class="section-lead">Hands-on applications demonstrating machine learning, native Android development, and database architecture.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Featured ML Project -->
+        <div class="project-card project-featured">
+          <div class="project-body" style="border-right: 1px solid var(--border-color);">
+            <div class="project-header-bar" style="margin: -24px -24px 20px; border-radius: 0;">
+              <span class="project-category-tag">Featured · Machine Learning</span>
+              <span class="project-date">Aug 2026</span>
+            </div>
+            <h3 class="project-title">Tigri Beach Restaurant — ML Sales & Order Demand Forecasting</h3>
+            <p class="project-summary">
+              An end-to-end intelligent revenue forecasting, order prediction, and menu analytics platform developed for Tigri Beach Restaurant & Bar (Hikkaduwa). Utilizes Random Forest Regressor with cross-validation to predict seasonal customer order volumes and dining demand. Includes K-Means Clustering on menu items to classify profitability and popularity.
+            </p>
+            <div class="project-metrics">
+              <span>📈 <strong>R² = 0.9175</strong> accuracy · <strong>15–20%</strong> estimated food waste reduction</span>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Flask REST API</span>
+              <span class="project-tag">Random Forest Regressor</span>
+              <span class="project-tag">K-Means Clustering</span>
+              <span class="project-tag">Chart.js</span>
+              <span class="project-tag">Supervised Regression</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">NIBM Academic Project</span>
+              <div class="project-links-group">
+                <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  GitHub Repo
+                </a>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-ml">
+                  LinkedIn
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body" style="background-color: var(--bg-body); display: flex; flex-direction: column;">
+            <!-- Interactive ML Screenshot Gallery -->
+            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); margin-bottom: 10px; background: #0b1120;">
+              <img id="tigri-main-img" src="tigri_dashboard.png" alt="Tigri Beach Restaurant AI Hub Dashboard" style="width: 100%; height: auto; display: block; object-fit: cover; transition: opacity 0.2s;" />
+            </div>
+
+            <!-- Screenshot Selector Tabs -->
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;">
+              <button type="button" class="gallery-nav-btn active" onclick="switchTigriImg('tigri_dashboard.png', this)">📊 Dashboard</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_prediction.png', this)">🎯 Order Prediction</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_charts.png', this)">📈 Sales Trends</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_insights.png', this)">🍕 Menu Insights</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_clustering.png', this)">📦 Demand Clustering</button>
+            </div>
+            
+            <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">Key Technical Highlights</h4>
+            <ul style="color: var(--text-secondary); font-size: 0.86rem; line-height: 1.6; padding-left: 16px; margin-bottom: 14px;">
+              <li><strong>Order Demand Prediction:</strong> Trained RandomForestRegressor predicting order volume & items per order based on month, day of week, and seasonal shifts.</li>
+              <li><strong>Revenue Trends & Demand Clustering:</strong> Analyzed historical revenue with K-Means clustering separating popular star dishes from seasonal items.</li>
+              <li><strong>Flask REST Backend:</strong> Real-time API (`POST /api/predict-orders`) integrated with interactive Chart.js analytics dashboard.</li>
+            </ul>
+
+            <div style="margin-top: auto; padding: 12px; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 0.74rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Repository</div>
+                <div style="font-size: 0.84rem; color: var(--primary); font-weight: 600;">restaurant-sales-demand-ml</div>
+              </div>
+              <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="padding: 5px 12px; font-size: 0.8rem;">
+                View on GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: PharmaGo -->
+        <div class="project-card">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Mobile Application</span>
+            <span class="project-date">Jun–Aug 2026</span>
+          </div>
+          <div class="project-body">
+            <!-- Video Player for PharmaGo -->
+            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 14px; background: #000; box-shadow: var(--shadow-sm);">
+              <video controls preload="metadata" style="width: 100%; max-height: 240px; display: block; background: #000;">
+                <source src="pharmago_demo.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+
+            <h3 class="project-title">PharmaGo — Android Pharmacy Finder App</h3>
+            <p class="project-summary">
+              A comprehensive multi-role Android application connecting customers, pharmacies, riders, and administrators. Enables GPS pharmacy discovery, real-time medicine stock verification, prescription uploads, and live delivery tracking with OSMDroid.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">Android Studio</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">OSMDroid</span>
+              <span class="project-tag">Material Design</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Android Application</span>
+              <div class="project-links-group">
+                <a href="https://github.com/Ramesha-Dasangi/PharmaGo-MAD-Project" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  GitHub Repo
+                </a>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-pharmago">
+                  View
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: CycloTrek -->
+        <div class="project-card">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Web Application</span>
+            <span class="project-date">Diploma Final</span>
+          </div>
+          <div class="project-body">
+            <!-- Video Player for CycloTrek -->
+            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 14px; background: #000; box-shadow: var(--shadow-sm);">
+              <video controls preload="metadata" style="width: 100%; max-height: 240px; display: block; background: #000;">
+                <source src="Diploma_final_Project.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+
+            <h3 class="project-title">CycloTrek Adventures — Booking Platform</h3>
+            <p class="project-summary">
+              Full-stack tourism and adventure cycling booking portal (Diploma Capstone Final). Features role-based access control for customers and admins, activity scheduling, inventory tracking, tour guide assignment, and reporting.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5/CSS3</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Bootstrap 5</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">NIBM Final Project</span>
+              <div class="project-links-group">
+                <a href="https://github.com/Ramesha-Dasangi/CycloTrekAdventures-" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  GitHub Repo
+                </a>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-cyclotrek">
+                  View
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Supermarket Management -->
+        <div class="project-card">
+          <div class="project-header-bar">
+            <span class="project-category-tag">OOP & Desktop · Academic Project</span>
+            <span class="project-date">Academic</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Supermarket Management System</h3>
+            <p class="project-summary">
+              Java-based application applying Object-Oriented Programming (OOP) concepts — inheritance, encapsulation, and polymorphism — to manage product inventories, point-of-sale transactions, and customer records. Complete with architectural documentation.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">OOP Architecture</span>
+              <span class="project-tag">DBMS</span>
+              <span class="project-tag">Data Structures</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Java Academic Project</span>
+              <div class="project-links-group">
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-supermarket">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  View on LinkedIn
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Hospital Management -->
+        <div class="project-card">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Systems & C · Project Report</span>
+            <span class="project-date">Academic</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Hospital Patient Management System</h3>
+            <p class="project-summary">
+              Structured software project created in C focusing on file handling, pointer operations, patient record persistence, appointment schedules, and emergency bed allocation. Documented with comprehensive test cases and flow diagrams.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">C Language</span>
+              <span class="project-tag">File Persistence</span>
+              <span class="project-tag">Algorithms</span>
+              <span class="project-tag">Technical Report</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">C Programming Project</span>
+              <div class="project-links-group">
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-hospital">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  View on LinkedIn
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Network Infrastructure -->
+        <div class="project-card">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Networking · Case Study & Report</span>
+            <span class="project-date">Architecture</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Scalable Enterprise Network — EuroCall</h3>
+            <p class="project-summary">
+              Engineered a multi-tier network topology for a call center enterprise. Includes full engineering documentation on VLAN segmentation, access-list security, and redundancy, boosting throughput capacity by 50%.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Network Architecture</span>
+              <span class="project-tag">VLAN Design</span>
+              <span class="project-tag">Cisco Packet Tracer</span>
+              <span class="project-tag">Case Study</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Network Architecture Report</span>
+              <div class="project-links-group">
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-network">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  View on LinkedIn
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey & Education Section -->
+  <section class="journey-section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-heading">Education & Experience</h2>
+        <p class="section-lead">The academic milestones and practical experiences that have shaped my software engineering skillset.</p>
+      </div>
+
+      <div class="journey-grid">
+        <!-- Education Column -->
+        <div>
+          <h3 class="timeline-column-title">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            Education
+          </h3>
+          <div class="timeline-list">
+            <!-- HND -->
+            <div class="timeline-item">
+              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-card">
+                <div class="timeline-date">Jul 2024 – Present (Ongoing)</div>
+                <h4 class="timeline-role">Higher National Diploma in Software Engineering</h4>
+                <div class="timeline-place">National Institute of Business Management (NIBM) · Galle</div>
+                <p class="timeline-desc">
+                  Advancing knowledge in enterprise software engineering, mobile computing, applied machine learning, cloud databases, and team project delivery.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Java</span>
+                  <span class="timeline-tag">Android Studio</span>
+                  <span class="timeline-tag">Python</span>
+                  <span class="timeline-tag">ML Modeling</span>
+                  <span class="timeline-tag">C#</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diploma -->
+            <div class="timeline-item">
+              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-card">
+                <div class="timeline-date">Completed · 2024</div>
+                <h4 class="timeline-role">Diploma in Software Engineering</h4>
+                <div class="timeline-place">National Institute of Business Management (NIBM) · Galle</div>
+                <p class="timeline-desc">
+                  Built a solid foundation in algorithm design, OOP, relational database architecture, and full-stack web applications. Completed CycloTrek as the final capstone project.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Web Development</span>
+                  <span class="timeline-tag">PHP & MySQL</span>
+                  <span class="timeline-tag">C Programming</span>
+                  <span class="timeline-tag">OOP</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- School -->
+            <div class="timeline-item">
+              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-card">
+                <div class="timeline-date">Secondary Education</div>
+                <h4 class="timeline-role">Sanghamitta Balika Vidyalaya</h4>
+                <div class="timeline-place">Galle, Southern Province, Sri Lanka</div>
+                <p class="timeline-desc">
+                  Developed foundational analytical skills. Actively engaged in the Astronomy Club and represented the school in Table Tennis, learning discipline and team collaboration.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Astronomy Club</span>
+                  <span class="timeline-tag">Table Tennis</span>
+                  <span class="timeline-tag">Leadership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience & Activities Column -->
+        <div>
+          <h3 class="timeline-column-title">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            Experience & Engagement
+          </h3>
+          <div class="timeline-list">
+            <!-- Tutoring -->
+            <div class="timeline-item">
+              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-card">
+                <div class="timeline-date">Jan 2023 – Present · 3+ Years</div>
+                <h4 class="timeline-role">Mathematics & Logic Tutor</h4>
+                <div class="timeline-place">Freelance · Galle, Sri Lanka</div>
+                <p class="timeline-desc">
+                  Instructed students in mathematics, guiding them through analytical problem solving, algebra, and geometry. Developed patience, clarity in communication, and mentoring abilities.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Analytical Thinking</span>
+                  <span class="timeline-tag">Communication</span>
+                  <span class="timeline-tag">Mentoring</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Internship Readiness -->
+            <div class="timeline-item">
+              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-card">
+                <div class="timeline-date">Career Focus</div>
+                <h4 class="timeline-role">Seeking Software Engineering Internship</h4>
+                <div class="timeline-place">Remote / On-site (Sri Lanka)</div>
+                <p class="timeline-desc">
+                  Actively preparing for industry internship opportunities in software engineering, mobile development, or web engineering to contribute to real-world production environments.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Open to Work</span>
+                  <span class="timeline-tag">Software Development</span>
+                  <span class="timeline-tag">Continuous Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-box">
+        <div class="contact-left">
+          <span class="section-tag">Let's Connect</span>
+          <h3>Looking for an enthusiastic engineering intern?</h3>
+          <p>
+            I am always eager to discuss software engineering opportunities, collaborative projects, or receive career mentorship. Feel free to connect with me via GitHub, LinkedIn, or send me a direct message!
+          </p>
+
+          <div class="contact-methods">
+            <!-- Email Contact Item -->
+            <a href="mailto:rameshadasangi4@gmail.com" class="contact-item" id="contact-email-link">
+              <div class="contact-icon" style="background-color: #fee2e2; color: #dc2626;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Direct Email</span>
+                <span class="contact-val">rameshadasangi4@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- GitHub Contact Item -->
+            <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-github-link">
+              <div class="contact-icon contact-icon-gh">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-val">github.com/Ramesha-Dasangi</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn Contact Item -->
+            <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-linkedin-link">
+              <div class="contact-icon contact-icon-li">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">LinkedIn Profile</span>
+                <span class="contact-val">linkedin.com/in/ramesha-dasangi</span>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Location</span>
+                <span class="contact-val">Galle, Southern Province, Sri Lanka</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Availability</span>
+                <span class="contact-val">Available for Internships & Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-bottom: 18px;">Send a Direct Message</h4>
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Priyantha Silva" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-email">Your Email</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. priyantha@company.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Hello Ramesha, I saw your portfolio and would like to connect regarding an opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="form-submit-btn">
+              Send Message
+            </button>
+            <div id="form-feedback" style="display:none; margin-top:12px; font-size:0.88rem; text-align:center; padding: 8px; border-radius: var(--radius-sm);"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span>© 2026 Ramesha Dasangi · Software Engineering Student (NIBM)</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#hero">Back to top ↑</a></li>
+        <li><a href="mailto:rameshadasangi4@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+      // Close menu when clicking link
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    // ML Project Gallery Switcher
+    function switchTigriImg(imgSrc, btn) {
+      const img = document.getElementById('tigri-main-img');
+      if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+          img.src = imgSrc;
+          img.style.opacity = '1';
+        }, 150);
+      }
+      const buttons = document.querySelectorAll('.gallery-nav-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    // Contact Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const email = document.getElementById('form-email').value;
+      const message = document.getElementById('form-message').value;
+      const feedback = document.getElementById('form-feedback');
+
+      // Create a mailto fallback directly to rameshadasangi4@gmail.com
+      const recipient = "rameshadasangi4@gmail.com";
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nSender Email: ${email}\n\nMessage:\n${message}`);
+      
+      feedback.style.display = 'block';
+      feedback.style.backgroundColor = '#ecfdf5';
+      feedback.style.color = '#059669';
+      feedback.style.border = '1px solid #a7f3d0';
+      feedback.innerHTML = `✓ Thank you, <strong>${name}</strong>! Opening your email client to send to <strong>${recipient}</strong>...`;
+
+      setTimeout(() => {
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+      }, 800);
+    }
+  </script>
+</body>
+</html>
