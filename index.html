@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Ramesha Dasangi | Software Engineering Student (NIBM)</title>
   <meta name="description" content="Portfolio of Ramesha Dasangi – Software Engineering Student at NIBM Sri Lanka. Projects in Java, Android Development, Web Platforms, and Machine Learning." />
   <meta name="keywords" content="Ramesha Dasangi, Software Engineering Student, NIBM, Sri Lanka, Java, Android, Web Development, Machine Learning, Portfolio, GitHub" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after {
@@ -43,15 +43,20 @@
       --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
       --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
 
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --radius-xl: 24px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
       --radius-full: 9999px;
 
       --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
     }
 
     html {
@@ -68,77 +73,99 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Paragraph Justification & Typography */
     p {
-      text-align: justify;
-      text-justify: inter-word;
-      hyphens: auto;
+      text-align: left;
+      line-height: 1.7;
+    }
+
+    @media (min-width: 768px) {
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
     }
 
     .container {
       max-width: 1140px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
+      width: 100%;
     }
 
-    /* Header & Navigation */
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+    }
+
+    /* Navigation */
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.94);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
       transition: var(--transition);
+      width: 100%;
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 68px;
     }
 
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
       color: var(--text-main);
+      min-width: 0;
     }
 
     .nav-avatar-mini {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--border-color);
+      border: 1.5px solid var(--border-color);
+      flex-shrink: 0;
     }
 
     .nav-brand-text {
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
 
     .nav-name {
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       letter-spacing: -0.02em;
       line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .nav-role {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
       font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 26px;
       list-style: none;
     }
 
@@ -146,7 +173,7 @@
       text-decoration: none;
       color: var(--text-secondary);
       font-weight: 500;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       transition: var(--transition);
     }
 
@@ -157,19 +184,20 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      flex-shrink: 0;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 9px 18px;
+      gap: 7px;
+      padding: 8px 16px;
       border-radius: var(--radius-md);
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       text-decoration: none;
       cursor: pointer;
       transition: var(--transition);
@@ -210,12 +238,11 @@
       background-color: #1e293b;
       color: #ffffff;
       transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
     }
 
     .btn-sm {
-      padding: 7px 14px;
-      font-size: 0.84rem;
+      padding: 6px 12px;
+      font-size: 0.8rem;
       border-radius: var(--radius-sm);
     }
 
@@ -224,22 +251,36 @@
       background: none;
       border: none;
       cursor: pointer;
-      padding: 8px;
+      padding: 6px;
       color: var(--text-main);
+      border-radius: var(--radius-sm);
     }
 
     /* Hero Section */
     .hero-section {
-      padding: 76px 0 64px;
+      padding: 48px 0 54px;
       background: linear-gradient(180deg, #ffffff 0%, var(--bg-body) 100%);
       border-bottom: 1px solid var(--border-color);
     }
 
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: 72px 0 64px;
+      }
+    }
+
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.22fr 1fr;
-      gap: 52px;
+      grid-template-columns: 1fr;
+      gap: 36px;
       align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.25fr 0.95fr;
+        gap: 52px;
+      }
     }
 
     .hero-content {
@@ -255,20 +296,21 @@
       background-color: var(--emerald-subtle);
       border: 1px solid var(--emerald-border);
       color: var(--emerald);
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: var(--radius-full);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       font-family: var(--font-heading);
     }
 
     .status-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background-color: var(--emerald);
       position: relative;
+      flex-shrink: 0;
     }
 
     .status-dot::after {
@@ -288,12 +330,13 @@
 
     .hero-title {
       font-family: var(--font-heading);
-      font-size: clamp(2.3rem, 4.3vw, 3.2rem);
+      font-size: clamp(2rem, 5.8vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.15;
+      line-height: 1.18;
       color: var(--text-main);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      word-break: break-word;
     }
 
     .hero-title span {
@@ -302,45 +345,63 @@
 
     .hero-subtitle {
       font-family: var(--font-heading);
-      font-size: 1.15rem;
+      font-size: clamp(0.98rem, 2.5vw, 1.15rem);
       font-weight: 600;
       color: var(--text-secondary);
-      margin-bottom: 18px;
-      line-height: 1.4;
+      margin-bottom: 16px;
+      line-height: 1.45;
     }
 
     .hero-bio {
-      font-size: 1.02rem;
+      font-size: 0.96rem;
       color: var(--text-secondary);
-      line-height: 1.75;
-      margin-bottom: 28px;
+      line-height: 1.7;
+      margin-bottom: 24px;
       max-width: 580px;
-      text-align: justify;
-      text-justify: inter-word;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 34px;
+      gap: 10px;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons .btn {
+        flex: 1 1 calc(50% - 10px);
+        font-size: 0.82rem;
+        padding: 9px 12px;
+      }
+      .hero-buttons .btn-primary {
+        flex: 1 1 100%;
+      }
     }
 
     .hero-meta {
       display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      padding-top: 22px;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 18px;
       border-top: 1px solid var(--border-color);
       width: 100%;
+    }
+
+    @media (min-width: 640px) {
+      .hero-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
     }
 
     .meta-item {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       color: var(--text-secondary);
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       font-weight: 500;
     }
 
@@ -355,17 +416,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
 
     .photo-card {
       position: relative;
       width: 100%;
-      max-width: 380px;
+      max-width: 320px;
       background: var(--bg-white);
       border-radius: var(--radius-xl);
-      padding: 14px;
+      padding: 12px;
       box-shadow: var(--shadow-lg);
       border: 1px solid var(--border-color);
+    }
+
+    @media (min-width: 900px) {
+      .photo-card {
+        max-width: 360px;
+        padding: 14px;
+      }
     }
 
     .photo-inner {
@@ -386,72 +455,76 @@
       transition: transform 0.4s ease;
     }
 
-    .photo-card:hover .photo-inner img {
-      transform: scale(1.02);
-    }
-
     .photo-badge {
       position: absolute;
-      bottom: -15px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
       background: var(--bg-white);
       border: 1px solid var(--border-color);
-      padding: 8px 18px;
+      padding: 6px 14px;
       border-radius: var(--radius-full);
       box-shadow: var(--shadow-md);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       white-space: nowrap;
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       color: var(--text-main);
+      max-width: 92%;
     }
 
     .badge-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--primary);
+      flex-shrink: 0;
     }
 
-    /* Sections */
+    /* Section Headers */
     section {
-      padding: 76px 0;
+      padding: 54px 0;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 76px 0;
+      }
     }
 
     .section-header {
-      margin-bottom: 46px;
+      margin-bottom: 34px;
     }
 
     .section-tag {
       font-family: var(--font-heading);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       color: var(--primary);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: block;
     }
 
     .section-heading {
       font-family: var(--font-heading);
-      font-size: 2.05rem;
+      font-size: clamp(1.6rem, 4vw, 2.05rem);
       font-weight: 800;
       letter-spacing: -0.025em;
       color: var(--text-main);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.25;
     }
 
     .section-lead {
       color: var(--text-secondary);
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       max-width: 660px;
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
     /* About Section */
@@ -462,32 +535,50 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
+      grid-template-columns: 1fr;
+      gap: 32px;
       align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
+      }
     }
 
     .about-text p {
       color: var(--text-secondary);
-      font-size: 1.02rem;
-      line-height: 1.78;
-      margin-bottom: 18px;
-      text-align: justify;
-      text-justify: inter-word;
+      font-size: 0.96rem;
+      line-height: 1.74;
+      margin-bottom: 16px;
     }
 
     .about-cards-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .about-cards-grid {
+        gap: 16px;
+      }
     }
 
     .stat-card {
       background-color: var(--bg-body);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 22px;
+      border-radius: var(--radius-md);
+      padding: 16px;
       transition: var(--transition);
+    }
+
+    @media (min-width: 640px) {
+      .stat-card {
+        padding: 20px;
+        border-radius: var(--radius-lg);
+      }
     }
 
     .stat-card:hover {
@@ -497,31 +588,39 @@
       transform: translateY(-2px);
     }
 
-    .stat-icon {
-      font-size: 1.6rem;
+    .stat-icon-wrap {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 10px;
     }
 
     .stat-number {
       font-family: var(--font-heading);
-      font-size: 1.75rem;
+      font-size: 1.4rem;
       font-weight: 800;
       color: var(--text-main);
       letter-spacing: -0.02em;
       line-height: 1.1;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .stat-label {
-      font-size: 0.86rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-secondary);
+      line-height: 1.3;
     }
 
     .stat-desc {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     /* Skills Section */
@@ -532,15 +631,29 @@
 
     .skills-category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      gap: 24px;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 600px) {
+      .skills-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .skills-category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
     }
 
     .skill-card {
       background-color: var(--bg-white);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 24px;
+      padding: 20px;
       box-shadow: var(--shadow-card);
       transition: var(--transition);
     }
@@ -554,27 +667,27 @@
     .skill-card-header {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-      padding-bottom: 14px;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .skill-card-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-md);
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
       background-color: var(--primary-subtle);
       color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
     .skill-card-title {
       font-family: var(--font-heading);
-      font-size: 1.02rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text-main);
     }
@@ -582,20 +695,20 @@
     .pill-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
     }
 
     .tech-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
+      padding: 5px 11px;
       background-color: var(--bg-subtle);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-full);
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text-main);
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      color: var(--text-secondary);
       transition: var(--transition);
     }
 
@@ -613,8 +726,14 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      grid-template-columns: 1fr;
       gap: 28px;
+    }
+
+    @media (min-width: 720px) {
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      }
     }
 
     .project-card {
@@ -626,129 +745,164 @@
       flex-direction: column;
       box-shadow: var(--shadow-card);
       transition: var(--transition);
+      width: 100%;
     }
 
     .project-card:hover {
       border-color: #cbd5e1;
       box-shadow: var(--shadow-lg);
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
 
     .project-featured {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 900px) {
+      .project-featured {
+        grid-template-columns: 1.18fr 0.92fr;
+      }
+      .featured-left-side {
+        border-right: 1px solid var(--border-color);
+      }
+    }
+
+    @media (max-width: 899px) {
+      .featured-left-side {
+        border-bottom: 1px solid var(--border-color);
+      }
     }
 
     .project-header-bar {
-      padding: 18px 24px;
+      padding: 14px 18px;
       background-color: var(--bg-subtle);
       border-bottom: 1px solid var(--border-color);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 8px;
     }
 
+    /* Refined Blue Category Tag */
     .project-category-tag {
       font-family: var(--font-heading);
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--primary);
-      background: var(--primary-subtle);
-      border: 1px solid var(--primary-border);
-      padding: 3px 10px;
+      letter-spacing: 0.03em;
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 4px 10px;
       border-radius: var(--radius-full);
+      white-space: nowrap;
     }
 
     .project-date {
-      font-size: 0.8rem;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
       color: var(--text-muted);
       font-weight: 500;
+      white-space: nowrap;
     }
 
     .project-body {
-      padding: 24px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
+    @media (min-width: 640px) {
+      .project-body {
+        padding: 22px;
+      }
+    }
+
     .project-title {
       font-family: var(--font-heading);
-      font-size: 1.22rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       line-height: 1.35;
     }
 
     .project-summary {
       color: var(--text-secondary);
-      font-size: 0.92rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
       flex-grow: 1;
-      text-align: justify;
-      text-justify: inter-word;
     }
 
     .project-metrics {
       background-color: var(--bg-body);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      padding: 9px 12px;
       font-size: 0.82rem;
       color: var(--text-main);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 8px;
+      line-height: 1.4;
+      font-family: var(--font-heading);
     }
 
-    .project-metrics strong {
-      color: var(--primary);
+    .metric-chip {
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #bfdbfe;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .project-tag {
-      font-size: 0.78rem;
-      padding: 4px 10px;
+      font-size: 0.74rem;
+      padding: 4px 9px;
       background-color: var(--bg-subtle);
       border-radius: var(--radius-sm);
       color: var(--text-secondary);
-      font-weight: 500;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      border: 1px solid var(--border-subtle);
     }
 
     .project-footer {
-      padding-top: 16px;
+      padding-top: 14px;
       border-top: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .project-links-group {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
     .project-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--primary);
       text-decoration: none;
       transition: var(--transition);
@@ -756,19 +910,87 @@
 
     .project-link:hover {
       color: var(--primary-hover);
-      gap: 8px;
     }
 
     .project-link-gh {
       color: var(--text-main);
     }
 
-    .project-link-gh:hover {
-      color: var(--primary);
+    /* Modern App / Browser Window Showcase Frame */
+    .app-window-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      background: #0f172a;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .window-header {
+      background: #1e293b;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #334155;
+    }
+
+    .window-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background-color: #f87171; }
+    .dot-yellow { background-color: #fbbf24; }
+    .dot-green { background-color: #34d399; }
+
+    .window-title {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-left: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .window-content {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Fixed Video Fit to Prevent Zooming on Mobile App Videos */
+    .window-content video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Full phone screen is visible without zoom! */
+      display: block;
+      background: #020617;
+    }
+
+    .window-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .gallery-nav-btn {
-      padding: 5px 11px;
+      padding: 5px 10px;
       font-size: 0.74rem;
       font-weight: 600;
       font-family: var(--font-heading);
@@ -779,12 +1001,6 @@
       cursor: pointer;
       transition: var(--transition);
       white-space: nowrap;
-    }
-
-    .gallery-nav-btn:hover {
-      background: var(--bg-subtle);
-      border-color: #cbd5e1;
-      color: var(--text-main);
     }
 
     .gallery-nav-btn.active {
@@ -801,49 +1017,56 @@
 
     .journey-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 900px) {
+      .journey-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
     }
 
     .timeline-column-title {
       font-family: var(--font-heading);
-      font-size: 1.22rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .timeline-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
       position: relative;
     }
 
     .timeline-list::before {
       content: '';
       position: absolute;
-      left: 17px;
-      top: 14px;
-      bottom: 20px;
+      left: 14px;
+      top: 12px;
+      bottom: 16px;
       width: 2px;
       background-color: var(--border-color);
     }
 
     .timeline-item {
       position: relative;
-      padding-left: 44px;
+      padding-left: 36px;
     }
 
     .timeline-marker {
       position: absolute;
-      left: 8px;
+      left: 6px;
       top: 6px;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background-color: var(--bg-white);
       border: 2px solid var(--primary);
@@ -854,8 +1077,8 @@
     }
 
     .timeline-marker-inner {
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background-color: var(--primary);
     }
@@ -864,20 +1087,16 @@
       background-color: var(--bg-white);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 18px 20px;
+      padding: 16px;
       box-shadow: var(--shadow-card);
       transition: var(--transition);
     }
 
-    .timeline-card:hover {
-      border-color: #cbd5e1;
-      box-shadow: var(--shadow-sm);
-    }
-
     .timeline-date {
-      font-size: 0.78rem;
-      font-weight: 600;
+      font-size: 0.74rem;
+      font-weight: 700;
       color: var(--primary);
+      font-family: var(--font-heading);
       text-transform: uppercase;
       letter-spacing: 0.04em;
       margin-bottom: 4px;
@@ -885,37 +1104,37 @@
 
     .timeline-role {
       font-family: var(--font-heading);
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .timeline-place {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: var(--text-secondary);
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .timeline-desc {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 12px;
-      text-align: justify;
-      text-justify: inter-word;
+      line-height: 1.6;
+      margin-bottom: 10px;
     }
 
     .timeline-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
     }
 
     .timeline-tag {
-      font-size: 0.74rem;
-      padding: 3px 8px;
+      font-size: 0.72rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      padding: 2px 8px;
       background-color: var(--bg-subtle);
       border-radius: var(--radius-sm);
       color: var(--text-secondary);
@@ -930,59 +1149,73 @@
     .contact-card-box {
       background: var(--bg-body);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-xl);
-      padding: 44px;
+      border-radius: var(--radius-lg);
+      padding: 20px;
       display: grid;
-      grid-template-columns: 1fr 1.05fr;
-      gap: 44px;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 640px) {
+      .contact-card-box {
+        padding: 32px;
+        border-radius: var(--radius-xl);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .contact-card-box {
+        grid-template-columns: 1fr 1.05fr;
+        gap: 40px;
+        padding: 40px;
+      }
     }
 
     .contact-left h3 {
       font-family: var(--font-heading);
-      font-size: 1.75rem;
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
       font-weight: 800;
       letter-spacing: -0.02em;
       color: var(--text-main);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .contact-left p {
       color: var(--text-secondary);
-      font-size: 0.98rem;
-      line-height: 1.72;
-      margin-bottom: 26px;
-      text-align: justify;
-      text-justify: inter-word;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 20px;
     }
 
     .contact-methods {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 12px 16px;
+      gap: 12px;
+      padding: 10px 14px;
       background-color: var(--bg-white);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       text-decoration: none;
       color: var(--text-main);
       transition: var(--transition);
+      min-width: 0;
     }
 
     .contact-item:hover {
       border-color: var(--primary-border);
       box-shadow: var(--shadow-sm);
-      transform: translateX(4px);
+      transform: translateX(3px);
     }
 
     .contact-icon {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: var(--radius-md);
       background-color: var(--primary-subtle);
       color: var(--primary);
@@ -1005,10 +1238,11 @@
     .contact-details {
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
 
     .contact-label {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -1018,8 +1252,11 @@
     .contact-val {
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     /* Contact Form */
@@ -1027,30 +1264,36 @@
       background-color: var(--bg-white);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 28px;
+      padding: 20px;
       box-shadow: var(--shadow-card);
     }
 
+    @media (min-width: 640px) {
+      .contact-form {
+        padding: 26px;
+      }
+    }
+
     .form-group {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .form-label {
       display: block;
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .form-input, .form-textarea {
       width: 100%;
-      padding: 10px 14px;
+      padding: 9px 12px;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       font-family: var(--font-body);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-main);
       background-color: var(--bg-white);
       transition: var(--transition);
@@ -1063,34 +1306,40 @@
     }
 
     .form-textarea {
-      min-height: 110px;
+      min-height: 100px;
       resize: vertical;
     }
 
     /* Footer */
     footer {
       background-color: var(--bg-white);
-      padding: 32px 0;
+      padding: 28px 0;
       border-top: 1px solid var(--border-color);
     }
 
     .footer-inner {
       display: flex;
+      flex-direction: column;
+      gap: 14px;
       align-items: center;
-      justify-content: space-between;
-      font-size: 0.88rem;
+      text-align: center;
+      font-size: 0.84rem;
       color: var(--text-muted);
     }
 
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
     }
 
     .footer-links {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
       list-style: none;
     }
 
@@ -1104,38 +1353,8 @@
       color: var(--primary);
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .hero-content {
-        align-items: flex-start;
-      }
-
-      .hero-buttons {
-        justify-content: flex-start;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .journey-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-card-box {
-        grid-template-columns: 1fr;
-        padding: 28px;
-      }
-
-      .project-featured {
-        grid-template-columns: 1fr;
-      }
-
+    /* Mobile Menu Drawer */
+    @media (max-width: 899px) {
       .nav-menu {
         display: none;
       }
@@ -1144,34 +1363,45 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 72px;
+        top: 68px;
         left: 0;
         right: 0;
         background: var(--bg-white);
         border-bottom: 1px solid var(--border-color);
         padding: 20px;
         box-shadow: var(--shadow-lg);
-        gap: 16px;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .nav-menu.active li {
+        width: 100%;
+      }
+
+      .nav-menu.active a {
+        display: block;
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        font-size: 0.95rem;
+      }
+
+      .nav-menu.active a:active,
+      .nav-menu.active a:hover {
+        background: var(--bg-subtle);
       }
 
       .mobile-toggle {
         display: block;
       }
+
+      .desktop-only-btn {
+        display: none !important;
+      }
     }
 
-    @media (max-width: 600px) {
-      .about-cards-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
+    @media (min-width: 900px) {
+      .mobile-menu-actions {
+        display: none !important;
       }
     }
   </style>
@@ -1189,24 +1419,36 @@
         </div>
       </a>
 
+      <!-- Menu for Desktop and Mobile Slide-Down -->
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#journey">Journey</a></li>
         <li><a href="#contact">Contact</a></li>
+        
+        <li class="mobile-menu-actions" style="display: flex; flex-direction: column; gap: 8px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+          <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm" style="width: 100%;">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub Profile
+          </a>
+          <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn Profile
+          </a>
+        </li>
       </ul>
 
       <div class="nav-actions">
-        <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm" id="nav-github-btn" title="GitHub Profile">
+        <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm desktop-only-btn" id="nav-github-btn" title="GitHub Profile">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="nav-linkedin-btn">
+        <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm desktop-only-btn" id="nav-linkedin-btn">
           <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           LinkedIn
         </a>
-        <a href="#contact" class="btn btn-primary btn-sm" id="nav-contact-btn">Get In Touch</a>
+        <a href="#contact" class="btn btn-primary btn-sm" id="nav-contact-btn">Contact</a>
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
           <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -1228,39 +1470,39 @@
         </h1>
 
         <p class="hero-subtitle">
-          Software Engineering Student at NIBM · Mobile, Web & Machine Learning Solutions
+          Software Engineering Student at NIBM · Mobile, Web & Applied Machine Learning
         </p>
 
         <p class="hero-bio">
-          I am a dedicated Software Engineering student pursuing my Higher National Diploma (HND) at the National Institute of Business Management (NIBM), Sri Lanka. I have completed my Diploma in Software Engineering and enjoy turning ideas into reliable, practical software solutions across Java, Android, Web platforms, and applied Machine Learning models.
+          I am a dedicated Software Engineering student pursuing my Higher National Diploma (HND) at NIBM Sri Lanka. I enjoy architecting reliable software solutions across Java, Android, Web platforms, and practical Machine Learning applications.
         </p>
 
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary" id="hero-view-work">
-            View My Projects
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            View Projects
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
           </a>
           <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="hero-github">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
           </a>
           <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="hero-linkedin">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             LinkedIn
           </a>
         </div>
 
         <div class="hero-meta">
           <div class="meta-item">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             Galle, Sri Lanka
           </div>
           <div class="meta-item">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
             NIBM HND Candidate
           </div>
           <div class="meta-item">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             <a href="mailto:rameshadasangi4@gmail.com" style="color:inherit; text-decoration:none; font-weight:600;">rameshadasangi4@gmail.com</a>
           </div>
         </div>
@@ -1286,49 +1528,57 @@
       <div class="section-header">
         <span class="section-tag">About Me</span>
         <h2 class="section-heading">Passionate about building reliable, practical software</h2>
-        <p class="section-lead">A glimpse into my academic journey, core values, and approach to software development.</p>
+        <p class="section-lead">A glimpse into my academic background, technical focus, and analytical foundation.</p>
       </div>
 
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a motivated Software Engineering student at the <strong>National Institute of Business Management (NIBM)</strong>. Having successfully completed my Diploma in Software Engineering, I am now continuing my studies in the Higher National Diploma (HND) program to further develop my technical capabilities and prepare for real-world software engineering roles.
+            I am a motivated Software Engineering student at the <strong>National Institute of Business Management (NIBM)</strong>. Having successfully completed my Diploma in Software Engineering, I am now continuing my studies in the Higher National Diploma (HND) program to further develop enterprise software design, mobile computing, and machine learning skillsets.
           </p>
           <p>
-            My engineering journey is driven by curiosity, structured logic, and practical problem-solving. Over the past several years, I have built academic and hands-on projects ranging from predictive machine learning models using Flask REST APIs to native Android applications integrated with Firebase, full-stack database platforms using PHP and MySQL, and foundational systems programming in C and Java.
+            My engineering work is rooted in structured logic, clean architecture, and practical problem-solving. Over the past several semesters, I have engineered applications ranging from predictive machine learning models with Flask REST APIs to native multi-role Android applications with Firebase, full-stack database portals using PHP and MySQL, and systems programming in C and Java.
           </p>
           <p>
-            Alongside my studies, I have worked as an independent mathematics tutor for over 3 years. This experience has strengthened my analytical mindset, patience, and ability to communicate complex concepts clearly — skills that directly benefit my collaboration and code design as a software developer.
+            Alongside my studies, I have worked as an independent mathematics tutor for over 3 years. This experience has deepened my analytical mindset, patience, and ability to break down complex problems into clear, solvable components.
           </p>
         </div>
 
         <div class="about-cards-grid">
           <div class="stat-card">
-            <div class="stat-icon">🎓</div>
+            <div class="stat-icon-wrap">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
             <div class="stat-number">NIBM</div>
             <div class="stat-label">Higher National Diploma</div>
             <div class="stat-desc">Software Engineering (Current)</div>
           </div>
 
           <div class="stat-card">
-            <div class="stat-icon">📜</div>
+            <div class="stat-icon-wrap">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
             <div class="stat-number">Diploma</div>
             <div class="stat-label">Software Engineering</div>
             <div class="stat-desc">Completed with strong foundation</div>
           </div>
 
           <div class="stat-card">
-            <div class="stat-icon">💻</div>
+            <div class="stat-icon-wrap">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
             <div class="stat-number">10+</div>
             <div class="stat-label">Projects Built</div>
             <div class="stat-desc">ML, Android, Web & Systems</div>
           </div>
 
           <div class="stat-card">
-            <div class="stat-icon">📐</div>
+            <div class="stat-icon-wrap">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            </div>
             <div class="stat-number">3+ Yrs</div>
-            <div class="stat-label">Math & Logic Tutoring</div>
-            <div class="stat-desc">Analytical problem-solving</div>
+            <div class="stat-label">Mathematics Tutor</div>
+            <div class="stat-desc">Analytical & logic coaching</div>
           </div>
         </div>
       </div>
@@ -1339,17 +1589,19 @@
   <section class="skills-section" id="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Core Competencies</span>
-        <h2 class="section-heading">Technologies & Technical Skills</h2>
-        <p class="section-lead">A structured overview of the tools, languages, and frameworks I use to build solutions.</p>
+        <span class="section-tag">Skillset</span>
+        <h2 class="section-heading">Technologies & Frameworks</h2>
+        <p class="section-lead">A structured overview of the programming languages, tools, and paradigms I apply in my work.</p>
       </div>
 
       <div class="skills-category-grid">
         <!-- Languages -->
         <div class="skill-card">
           <div class="skill-card-header">
-            <div class="skill-card-icon">⚡</div>
-            <h3 class="skill-card-title">Programming Languages</h3>
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="skill-card-title">Languages</h3>
           </div>
           <div class="pill-list">
             <span class="tech-pill">Java</span>
@@ -1366,8 +1618,10 @@
         <!-- Mobile & Web -->
         <div class="skill-card">
           <div class="skill-card-header">
-            <div class="skill-card-icon">📱</div>
-            <h3 class="skill-card-title">Mobile & Web Development</h3>
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <h3 class="skill-card-title">Mobile & Web</h3>
           </div>
           <div class="pill-list">
             <span class="tech-pill">Android Studio</span>
@@ -1375,16 +1629,18 @@
             <span class="tech-pill">HTML5 & CSS3</span>
             <span class="tech-pill">Flask (Python)</span>
             <span class="tech-pill">Bootstrap 5</span>
-            <span class="tech-pill">OSMDroid (Maps)</span>
-            <span class="tech-pill">RESTful APIs</span>
+            <span class="tech-pill">OSMDroid Maps</span>
+            <span class="tech-pill">REST APIs</span>
           </div>
         </div>
 
         <!-- ML & Data -->
         <div class="skill-card">
           <div class="skill-card-header">
-            <div class="skill-card-icon">📊</div>
-            <h3 class="skill-card-title">Data Science & Machine Learning</h3>
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="skill-card-title">Machine Learning & Data</h3>
           </div>
           <div class="pill-list">
             <span class="tech-pill">Random Forest</span>
@@ -1392,16 +1648,17 @@
             <span class="tech-pill">K-Means Clustering</span>
             <span class="tech-pill">Linear Regression</span>
             <span class="tech-pill">Chart.js Visualizations</span>
-            <span class="tech-pill">Predictive Analytics</span>
-            <span class="tech-pill">Statistical Modeling</span>
+            <span class="tech-pill">Scikit-Learn</span>
           </div>
         </div>
 
         <!-- Tools & Practices -->
         <div class="skill-card">
           <div class="skill-card-header">
-            <div class="skill-card-icon">🛠️</div>
-            <h3 class="skill-card-title">Tools & Engineering Practices</h3>
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <h3 class="skill-card-title">Engineering Tools</h3>
           </div>
           <div class="pill-list">
             <span class="tech-pill">Git & GitHub</span>
@@ -1409,8 +1666,7 @@
             <span class="tech-pill">OOP Architecture</span>
             <span class="tech-pill">Figma UI Design</span>
             <span class="tech-pill">UML Diagrams</span>
-            <span class="tech-pill">Network Design & VLAN</span>
-            <span class="tech-pill">IoT & Robotics</span>
+            <span class="tech-pill">Network VLANs</span>
           </div>
         </div>
       </div>
@@ -1421,101 +1677,121 @@
   <section class="projects-section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-heading">Featured Projects</h2>
-        <p class="section-lead">Hands-on applications demonstrating machine learning, native Android development, and database architecture.</p>
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-heading">Engineered Projects</h2>
+        <p class="section-lead">Practical applications covering applied machine learning, native Android development, and database architecture.</p>
       </div>
 
       <div class="projects-grid">
         <!-- Project 1: Featured ML Project -->
         <div class="project-card project-featured">
-          <div class="project-body" style="border-right: 1px solid var(--border-color);">
-            <div class="project-header-bar" style="margin: -24px -24px 20px; border-radius: 0;">
-              <span class="project-category-tag">Featured · Machine Learning</span>
+          <div class="project-body featured-left-side">
+            <div class="project-header-bar" style="margin: -18px -18px 16px; border-radius: 0;">
+              <span class="project-category-tag">Machine Learning · Featured</span>
               <span class="project-date">Aug 2026</span>
             </div>
             <h3 class="project-title">Tigri Beach Restaurant — ML Sales & Order Demand Forecasting</h3>
             <p class="project-summary">
-              An end-to-end intelligent revenue forecasting, order prediction, and menu analytics platform developed for Tigri Beach Restaurant & Bar (Hikkaduwa). Utilizes Random Forest Regressor with cross-validation to predict seasonal customer order volumes and dining demand. Includes K-Means Clustering on menu items to classify profitability and popularity.
+              An end-to-end predictive analytics and revenue forecasting platform built for Tigri Beach Restaurant & Bar (Hikkaduwa). Utilizes a Random Forest Regressor trained on seasonal ordering cycles to predict daily customer volume and order demand. Implements K-Means Clustering on menu items to categorize profitability and order frequency.
             </p>
             <div class="project-metrics">
-              <span>📈 <strong>R² = 0.9175</strong> accuracy · <strong>15–20%</strong> estimated food waste reduction</span>
+              <span class="metric-chip">R² = 0.9175</span>
+              <span>Evaluated accuracy · 15–20% estimated food waste reduction</span>
             </div>
             <div class="project-tags">
               <span class="project-tag">Python</span>
               <span class="project-tag">Flask REST API</span>
-              <span class="project-tag">Random Forest Regressor</span>
-              <span class="project-tag">K-Means Clustering</span>
+              <span class="project-tag">RandomForestRegressor</span>
+              <span class="project-tag">K-Means</span>
               <span class="project-tag">Chart.js</span>
-              <span class="project-tag">Supervised Regression</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">NIBM Academic Project</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">NIBM Academic Capstone</span>
               <div class="project-links-group">
                 <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
                   <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  GitHub Repo
+                  Repository
                 </a>
                 <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-ml">
-                  LinkedIn
-                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                  LinkedIn Overview
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                 </a>
               </div>
             </div>
           </div>
 
           <div class="project-body" style="background-color: var(--bg-body); display: flex; flex-direction: column;">
-            <!-- Interactive ML Screenshot Gallery -->
-            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); margin-bottom: 10px; background: #0b1120;">
-              <img id="tigri-main-img" src="tigri_dashboard.png" alt="Tigri Beach Restaurant AI Hub Dashboard" style="width: 100%; height: auto; display: block; object-fit: cover; transition: opacity 0.2s;" />
+            <!-- Modern Mockup Window for Tigri ML Dashboard -->
+            <div class="app-window-frame">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">tigri-analytics-dashboard.py • live preview</span>
+              </div>
+              <div class="window-content">
+                <img id="tigri-main-img" src="tigri_dashboard.png" alt="Tigri Beach Restaurant AI Hub Dashboard" />
+              </div>
             </div>
 
             <!-- Screenshot Selector Tabs -->
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;">
-              <button type="button" class="gallery-nav-btn active" onclick="switchTigriImg('tigri_dashboard.png', this)">📊 Dashboard</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_prediction.png', this)">🎯 Order Prediction</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_charts.png', this)">📈 Sales Trends</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_insights.png', this)">🍕 Menu Insights</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_clustering.png', this)">📦 Demand Clustering</button>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px;">
+              <button type="button" class="gallery-nav-btn active" onclick="switchTigriImg('tigri_dashboard.png', this)">Dashboard</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_prediction.png', this)">Prediction API</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_charts.png', this)">Sales Trends</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_insights.png', this)">Menu Analytics</button>
+              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_clustering.png', this)">Clustering</button>
             </div>
             
-            <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">Key Technical Highlights</h4>
-            <ul style="color: var(--text-secondary); font-size: 0.86rem; line-height: 1.6; padding-left: 16px; margin-bottom: 14px;">
-              <li><strong>Order Demand Prediction:</strong> Trained RandomForestRegressor predicting order volume & items per order based on month, day of week, and seasonal shifts.</li>
-              <li><strong>Revenue Trends & Demand Clustering:</strong> Analyzed historical revenue with K-Means clustering separating popular star dishes from seasonal items.</li>
-              <li><strong>Flask REST Backend:</strong> Real-time API (`POST /api/predict-orders`) integrated with interactive Chart.js analytics dashboard.</li>
+            <h4 style="font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Technical Implementation</h4>
+            <ul style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.55; padding-left: 16px; margin-bottom: 14px;">
+              <li><strong>Demand Forecasting:</strong> Scikit-learn Random Forest model trained on multivariate seasonal features.</li>
+              <li><strong>K-Means Clustering:</strong> Menu grouping by revenue contribution and order volume.</li>
+              <li><strong>REST Architecture:</strong> Flask endpoints serving dynamic chart payloads to frontend Chart.js components.</li>
             </ul>
 
-            <div style="margin-top: auto; padding: 12px; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+            <div style="margin-top: auto; padding: 10px 12px; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.74rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Repository</div>
-                <div style="font-size: 0.84rem; color: var(--primary); font-weight: 600;">restaurant-sales-demand-ml</div>
+                <div style="font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Repository</div>
+                <div style="font-size: 0.82rem; color: var(--primary); font-weight: 700; font-family: var(--font-heading);">restaurant-sales-demand-ml</div>
               </div>
-              <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="padding: 5px 12px; font-size: 0.8rem;">
-                View on GitHub ↗
+              <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">
+                GitHub ↗
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 2: PharmaGo -->
+        <!-- Project 2: PharmaGo (Fixed Video: object-fit: contain) -->
         <div class="project-card">
           <div class="project-header-bar">
-            <span class="project-category-tag">Mobile Application</span>
+            <span class="project-category-tag">Android Mobile App</span>
             <span class="project-date">Jun–Aug 2026</span>
           </div>
           <div class="project-body">
-            <!-- Video Player for PharmaGo -->
-            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 14px; background: #000; box-shadow: var(--shadow-sm);">
-              <video controls preload="metadata" style="width: 100%; max-height: 240px; display: block; background: #000;">
-                <source src="pharmago_demo.mp4" type="video/mp4" />
-                Your browser does not support HTML5 video.
-              </video>
+            <!-- Modern Mockup Window for PharmaGo Video with object-fit: contain -->
+            <div class="app-window-frame">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">PharmaGo Demo • Android Emulator</span>
+              </div>
+              <div class="window-content">
+                <video controls preload="metadata" playsinline>
+                  <source src="pharmago_demo.mp4" type="video/mp4" />
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
             </div>
 
-            <h3 class="project-title">PharmaGo — Android Pharmacy Finder App</h3>
+            <h3 class="project-title">PharmaGo — Android Pharmacy Finder Application</h3>
             <p class="project-summary">
-              A comprehensive multi-role Android application connecting customers, pharmacies, riders, and administrators. Enables GPS pharmacy discovery, real-time medicine stock verification, prescription uploads, and live delivery tracking with OSMDroid.
+              A native Java Android application connecting patients, registered pharmacies, delivery riders, and administrators. Supports GPS proximity search, real-time medicine inventory inquiries, secure prescription uploads, and live order dispatch tracking via OSMDroid.
             </p>
             <div class="project-tags">
               <span class="project-tag">Java</span>
@@ -1525,15 +1801,15 @@
               <span class="project-tag">Material Design</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">Android Application</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Android Application</span>
               <div class="project-links-group">
                 <a href="https://github.com/Ramesha-Dasangi/PharmaGo-MAD-Project" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  GitHub Repo
+                  GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-pharmago">
-                  View
-                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                  Overview
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                 </a>
               </div>
             </div>
@@ -1543,39 +1819,49 @@
         <!-- Project 3: CycloTrek -->
         <div class="project-card">
           <div class="project-header-bar">
-            <span class="project-category-tag">Web Application</span>
+            <span class="project-category-tag">Web & Relational DB</span>
             <span class="project-date">Diploma Final</span>
           </div>
           <div class="project-body">
-            <!-- Video Player for CycloTrek -->
-            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 14px; background: #000; box-shadow: var(--shadow-sm);">
-              <video controls preload="metadata" style="width: 100%; max-height: 240px; display: block; background: #000;">
-                <source src="Diploma_final_Project.mp4" type="video/mp4" />
-                Your browser does not support HTML5 video.
-              </video>
+            <!-- Modern Mockup Window for CycloTrek Video -->
+            <div class="app-window-frame">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">CycloTrek Adventures • Web Portal</span>
+              </div>
+              <div class="window-content">
+                <video controls preload="metadata" playsinline>
+                  <source src="Diploma_final_Project.mp4" type="video/mp4" />
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
             </div>
 
-            <h3 class="project-title">CycloTrek Adventures — Booking Platform</h3>
+            <h3 class="project-title">CycloTrek Adventures — Booking & Fleet Management</h3>
             <p class="project-summary">
-              Full-stack tourism and adventure cycling booking portal (Diploma Capstone Final). Features role-based access control for customers and admins, activity scheduling, inventory tracking, tour guide assignment, and reporting.
+              A full-stack web booking portal designed for adventure tourism enterprises. Features role-based access control (RBAC), tour scheduling, equipment inventory management, and automated invoicing with a MySQL relational database back-end.
             </p>
             <div class="project-tags">
-              <span class="project-tag">HTML5/CSS3</span>
               <span class="project-tag">PHP</span>
               <span class="project-tag">MySQL</span>
-              <span class="project-tag">Bootstrap 5</span>
               <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Bootstrap 5</span>
+              <span class="project-tag">HTML5/CSS3</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">NIBM Final Project</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Diploma Capstone Project</span>
               <div class="project-links-group">
                 <a href="https://github.com/Ramesha-Dasangi/CycloTrekAdventures-" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  GitHub Repo
+                  GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-cyclotrek">
-                  View
-                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                  Overview
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                 </a>
               </div>
             </div>
@@ -1585,26 +1871,26 @@
         <!-- Project 4: Supermarket Management -->
         <div class="project-card">
           <div class="project-header-bar">
-            <span class="project-category-tag">OOP & Desktop · Academic Project</span>
+            <span class="project-category-tag">Java · Desktop & OOP</span>
             <span class="project-date">Academic</span>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Supermarket Management System</h3>
+            <h3 class="project-title">Supermarket POS & Inventory Management System</h3>
             <p class="project-summary">
-              Java-based application applying Object-Oriented Programming (OOP) concepts — inheritance, encapsulation, and polymorphism — to manage product inventories, point-of-sale transactions, and customer records. Complete with architectural documentation.
+              Java-based application applying Object-Oriented Programming (OOP) concepts — inheritance, encapsulation, abstraction, and polymorphism — to handle retail inventory catalogues, point-of-sale transactions, and persistent customer records.
             </p>
             <div class="project-tags">
               <span class="project-tag">Java</span>
-              <span class="project-tag">OOP Architecture</span>
-              <span class="project-tag">DBMS</span>
+              <span class="project-tag">OOP</span>
               <span class="project-tag">Data Structures</span>
+              <span class="project-tag">DBMS</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">Java Academic Project</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Java Academic Project</span>
               <div class="project-links-group">
                 <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-supermarket">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  View on LinkedIn
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Details
                   <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                 </a>
               </div>
@@ -1615,26 +1901,26 @@
         <!-- Project 5: Hospital Management -->
         <div class="project-card">
           <div class="project-header-bar">
-            <span class="project-category-tag">Systems & C · Project Report</span>
+            <span class="project-category-tag">C Systems · Data Persistence</span>
             <span class="project-date">Academic</span>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Hospital Patient Management System</h3>
+            <h3 class="project-title">Hospital Patient Record & Allocation System</h3>
             <p class="project-summary">
-              Structured software project created in C focusing on file handling, pointer operations, patient record persistence, appointment schedules, and emergency bed allocation. Documented with comprehensive test cases and flow diagrams.
+              Structured systems software engineered in C focusing on memory management, pointers, and file persistence. Implements record indexing, doctor scheduling, and emergency bed allocation algorithms with detailed test documentation.
             </p>
             <div class="project-tags">
               <span class="project-tag">C Language</span>
-              <span class="project-tag">File Persistence</span>
+              <span class="project-tag">Pointers</span>
+              <span class="project-tag">File Handling</span>
               <span class="project-tag">Algorithms</span>
-              <span class="project-tag">Technical Report</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">C Programming Project</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">C Systems Project</span>
               <div class="project-links-group">
                 <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-hospital">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  View on LinkedIn
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Details
                   <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                 </a>
               </div>
@@ -1645,26 +1931,26 @@
         <!-- Project 6: Network Infrastructure -->
         <div class="project-card">
           <div class="project-header-bar">
-            <span class="project-category-tag">Networking · Case Study & Report</span>
+            <span class="project-category-tag">Networking & Security</span>
             <span class="project-date">Architecture</span>
           </div>
           <div class="project-body">
             <h3 class="project-title">Scalable Enterprise Network — EuroCall</h3>
             <p class="project-summary">
-              Engineered a multi-tier network topology for a call center enterprise. Includes full engineering documentation on VLAN segmentation, access-list security, and redundancy, boosting throughput capacity by 50%.
+              Architected a multi-tier network topology for a customer contact enterprise. Includes technical design specifications for VLAN segmentation, subnetting, Access Control Lists (ACLs), and link redundancy in Cisco Packet Tracer.
             </p>
             <div class="project-tags">
-              <span class="project-tag">Network Architecture</span>
+              <span class="project-tag">Networking</span>
               <span class="project-tag">VLAN Design</span>
               <span class="project-tag">Cisco Packet Tracer</span>
-              <span class="project-tag">Case Study</span>
+              <span class="project-tag">ACL Security</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">Network Architecture Report</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Network Architecture</span>
               <div class="project-links-group">
                 <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-network">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  View on LinkedIn
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Details
                   <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                 </a>
               </div>
@@ -1681,14 +1967,14 @@
       <div class="section-header">
         <span class="section-tag">Milestones</span>
         <h2 class="section-heading">Education & Experience</h2>
-        <p class="section-lead">The academic milestones and practical experiences that have shaped my software engineering skillset.</p>
+        <p class="section-lead">The academic foundation and practical experiences shaping my engineering path.</p>
       </div>
 
       <div class="journey-grid">
         <!-- Education Column -->
         <div>
           <h3 class="timeline-column-title">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
             Education
           </h3>
           <div class="timeline-list">
@@ -1700,13 +1986,13 @@
                 <h4 class="timeline-role">Higher National Diploma in Software Engineering</h4>
                 <div class="timeline-place">National Institute of Business Management (NIBM) · Galle</div>
                 <p class="timeline-desc">
-                  Advancing knowledge in enterprise software engineering, mobile computing, applied machine learning, cloud databases, and team project delivery.
+                  Advanced coursework in enterprise software architecture, mobile computing, applied machine learning, cloud databases, and capstone delivery.
                 </p>
                 <div class="timeline-tags">
                   <span class="timeline-tag">Java</span>
                   <span class="timeline-tag">Android Studio</span>
                   <span class="timeline-tag">Python</span>
-                  <span class="timeline-tag">ML Modeling</span>
+                  <span class="timeline-tag">Scikit-Learn</span>
                   <span class="timeline-tag">C#</span>
                 </div>
               </div>
@@ -1720,12 +2006,12 @@
                 <h4 class="timeline-role">Diploma in Software Engineering</h4>
                 <div class="timeline-place">National Institute of Business Management (NIBM) · Galle</div>
                 <p class="timeline-desc">
-                  Built a solid foundation in algorithm design, OOP, relational database architecture, and full-stack web applications. Completed CycloTrek as the final capstone project.
+                  Core fundamentals in algorithms, OOP principles, relational database design, and web architecture. Completed CycloTrek as the final capstone project.
                 </p>
                 <div class="timeline-tags">
-                  <span class="timeline-tag">Web Development</span>
+                  <span class="timeline-tag">Web Engineering</span>
                   <span class="timeline-tag">PHP & MySQL</span>
-                  <span class="timeline-tag">C Programming</span>
+                  <span class="timeline-tag">C</span>
                   <span class="timeline-tag">OOP</span>
                 </div>
               </div>
@@ -1739,22 +2025,21 @@
                 <h4 class="timeline-role">Sanghamitta Balika Vidyalaya</h4>
                 <div class="timeline-place">Galle, Southern Province, Sri Lanka</div>
                 <p class="timeline-desc">
-                  Developed foundational analytical skills. Actively engaged in the Astronomy Club and represented the school in Table Tennis, learning discipline and team collaboration.
+                  Developed strong mathematics and analytical foundation. Active member of the Astronomy Club and represented the school in Table Tennis.
                 </p>
                 <div class="timeline-tags">
                   <span class="timeline-tag">Astronomy Club</span>
                   <span class="timeline-tag">Table Tennis</span>
-                  <span class="timeline-tag">Leadership</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Experience & Activities Column -->
+        <!-- Experience Column -->
         <div>
           <h3 class="timeline-column-title">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
             Experience & Engagement
           </h3>
           <div class="timeline-list">
@@ -1766,12 +2051,11 @@
                 <h4 class="timeline-role">Mathematics & Logic Tutor</h4>
                 <div class="timeline-place">Freelance · Galle, Sri Lanka</div>
                 <p class="timeline-desc">
-                  Instructed students in mathematics, guiding them through analytical problem solving, algebra, and geometry. Developed patience, clarity in communication, and mentoring abilities.
+                  Coached students in core mathematics, analytical problem solving, algebra, and geometry. Developed clarity in technical explanation and mentorship abilities.
                 </p>
                 <div class="timeline-tags">
                   <span class="timeline-tag">Analytical Thinking</span>
-                  <span class="timeline-tag">Communication</span>
-                  <span class="timeline-tag">Mentoring</span>
+                  <span class="timeline-tag">Technical Communication</span>
                 </div>
               </div>
             </div>
@@ -1784,12 +2068,11 @@
                 <h4 class="timeline-role">Seeking Software Engineering Internship</h4>
                 <div class="timeline-place">Remote / On-site (Sri Lanka)</div>
                 <p class="timeline-desc">
-                  Actively preparing for industry internship opportunities in software engineering, mobile development, or web engineering to contribute to real-world production environments.
+                  Actively seeking internship opportunities to contribute technical skills across software engineering, mobile development, or applied ML to a production engineering team.
                 </p>
                 <div class="timeline-tags">
-                  <span class="timeline-tag">Open to Work</span>
-                  <span class="timeline-tag">Software Development</span>
-                  <span class="timeline-tag">Continuous Learning</span>
+                  <span class="timeline-tag">Open to Opportunities</span>
+                  <span class="timeline-tag">Internship</span>
                 </div>
               </div>
             </div>
@@ -1804,17 +2087,17 @@
     <div class="container">
       <div class="contact-card-box">
         <div class="contact-left">
-          <span class="section-tag">Let's Connect</span>
+          <span class="section-tag">Connect</span>
           <h3>Looking for an enthusiastic engineering intern?</h3>
           <p>
-            I am always eager to discuss software engineering opportunities, collaborative projects, or receive career mentorship. Feel free to connect with me via GitHub, LinkedIn, or send me a direct message!
+            I am always open to discussing software engineering opportunities, collaborative project ideas, or industry mentorship. Feel free to connect via LinkedIn, GitHub, or send a direct message.
           </p>
 
           <div class="contact-methods">
-            <!-- Email Contact Item -->
+            <!-- Email -->
             <a href="mailto:rameshadasangi4@gmail.com" class="contact-item" id="contact-email-link">
               <div class="contact-icon" style="background-color: #fee2e2; color: #dc2626;">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">Direct Email</span>
@@ -1822,10 +2105,10 @@
               </div>
             </a>
 
-            <!-- GitHub Contact Item -->
+            <!-- GitHub -->
             <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-github-link">
               <div class="contact-icon contact-icon-gh">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">GitHub</span>
@@ -1833,10 +2116,10 @@
               </div>
             </a>
 
-            <!-- LinkedIn Contact Item -->
+            <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-linkedin-link">
               <div class="contact-icon contact-icon-li">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">LinkedIn Profile</span>
@@ -1846,21 +2129,11 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">Location</span>
                 <span class="contact-val">Galle, Southern Province, Sri Lanka</span>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <div class="contact-details">
-                <span class="contact-label">Availability</span>
-                <span class="contact-val">Available for Internships & Projects</span>
               </div>
             </div>
           </div>
@@ -1868,7 +2141,7 @@
 
         <div>
           <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
-            <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-bottom: 18px;">Send a Direct Message</h4>
+            <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 14px;">Send a Direct Message</h4>
             <div class="form-group">
               <label class="form-label" for="form-name">Your Name</label>
               <input type="text" id="form-name" class="form-input" placeholder="e.g. Priyantha Silva" required />
@@ -1879,12 +2152,12 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="form-message">Message</label>
-              <textarea id="form-message" class="form-textarea" placeholder="Hello Ramesha, I saw your portfolio and would like to connect regarding an opportunity..." required></textarea>
+              <textarea id="form-message" class="form-textarea" placeholder="Hello Ramesha, I reviewed your projects and would like to discuss an opportunity..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;" id="form-submit-btn">
               Send Message
             </button>
-            <div id="form-feedback" style="display:none; margin-top:12px; font-size:0.88rem; text-align:center; padding: 8px; border-radius: var(--radius-sm);"></div>
+            <div id="form-feedback" style="display:none; margin-top:12px; font-size:0.84rem; text-align:center; padding: 8px; border-radius: var(--radius-sm);"></div>
           </form>
         </div>
       </div>
@@ -1915,7 +2188,6 @@
       toggleBtn.addEventListener('click', () => {
         navMenu.classList.toggle('active');
       });
-      // Close menu when clicking link
       navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('active');
@@ -1946,7 +2218,6 @@
       const message = document.getElementById('form-message').value;
       const feedback = document.getElementById('form-feedback');
 
-      // Create a mailto fallback directly to rameshadasangi4@gmail.com
       const recipient = "rameshadasangi4@gmail.com";
       const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
       const body = encodeURIComponent(`Name: ${name}\nSender Email: ${email}\n\nMessage:\n${message}`);
