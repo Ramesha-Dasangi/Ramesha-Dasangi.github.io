@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Ramesha Dasangi | Software Engineering Student (NIBM)</title>
-  <meta name="description" content="Portfolio of Ramesha Dasangi – Software Engineering Student at NIBM Sri Lanka. Projects in Java, Android Development, Web Platforms, and Machine Learning." />
-  <meta name="keywords" content="Ramesha Dasangi, Software Engineering Student, NIBM, Sri Lanka, Java, Android, Web Development, Machine Learning, Portfolio, GitHub" />
+  <title>Ramesha Dasangi | Software Engineering HND Student @ NIBM | Aspiring Software Developer</title>
+  <meta name="description"
+    content="Portfolio of Ramesha Dasangi – Software Engineering HND Student at NIBM Sri Lanka. Aspiring Software Developer with expertise in Java, Android, Web Development, Algorithms, Machine Learning & Robotics." />
+  <meta name="keywords"
+    content="Ramesha Dasangi, Software Engineering, HND, NIBM, Sri Lanka, Java, Android, Web Development, Machine Learning, Robotics, RouteWise, PharmaGo, CycloTrek, Portfolio, GitHub" />
+  <meta name="author" content="Ramesha Dasangi" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <style>
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -51,10 +60,12 @@
 
       --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --font-mono: 'JetBrains Mono', monospace;
+      --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    html, body {
+    html,
+    body {
       overflow-x: hidden;
       width: 100%;
     }
@@ -73,13 +84,6 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    p {
-      text-align: justify;
-      text-justify: inter-word;
-      line-height: 1.7;
-    }
-
-
     .container {
       max-width: 1140px;
       margin: 0 auto;
@@ -93,7 +97,7 @@
       }
     }
 
-    /* Navigation */
+    /* Header & Navigation */
     header {
       position: sticky;
       top: 0;
@@ -110,24 +114,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
+      height: 70px;
     }
 
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       color: var(--text-main);
       min-width: 0;
     }
 
     .nav-avatar-mini {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1.5px solid var(--border-color);
+      border: 2px solid var(--border-color);
       flex-shrink: 0;
     }
 
@@ -139,8 +143,8 @@
 
     .nav-name {
       font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.98rem;
+      font-weight: 800;
+      font-size: 1.02rem;
       letter-spacing: -0.02em;
       line-height: 1.2;
       white-space: nowrap;
@@ -151,7 +155,7 @@
     .nav-role {
       font-size: 0.72rem;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -170,6 +174,7 @@
       font-weight: 500;
       font-size: 0.9rem;
       transition: var(--transition);
+      position: relative;
     }
 
     .nav-menu a:hover {
@@ -179,7 +184,7 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       flex-shrink: 0;
     }
 
@@ -209,7 +214,7 @@
     .btn-primary:hover {
       background-color: var(--primary-hover);
       transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
     }
 
     .btn-outline {
@@ -221,7 +226,7 @@
     .btn-outline:hover {
       background-color: var(--bg-subtle);
       border-color: #cbd5e1;
-      color: var(--text-main);
+      color: var(--primary);
     }
 
     .btn-github {
@@ -235,9 +240,20 @@
       transform: translateY(-1px);
     }
 
+    .btn-linkedin {
+      background-color: #0a66c2;
+      color: #ffffff;
+    }
+
+    .btn-linkedin:hover {
+      background-color: #004182;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
     .btn-sm {
       padding: 6px 12px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       border-radius: var(--radius-sm);
     }
 
@@ -251,16 +267,46 @@
       border-radius: var(--radius-sm);
     }
 
+    @media (max-width: 820px) {
+      .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+    }
+
     /* Hero Section */
     .hero-section {
-      padding: 48px 0 54px;
+      padding: 50px 0 60px;
       background: linear-gradient(180deg, #ffffff 0%, var(--bg-body) 100%);
       border-bottom: 1px solid var(--border-color);
     }
 
     @media (min-width: 768px) {
       .hero-section {
-        padding: 72px 0 64px;
+        padding: 72px 0 70px;
       }
     }
 
@@ -274,7 +320,7 @@
     @media (min-width: 900px) {
       .hero-grid {
         grid-template-columns: 1.25fr 0.95fr;
-        gap: 52px;
+        gap: 48px;
       }
     }
 
@@ -291,7 +337,7 @@
       background-color: var(--emerald-subtle);
       border: 1px solid var(--emerald-border);
       color: var(--emerald);
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: var(--radius-full);
       font-size: 0.78rem;
       font-weight: 600;
@@ -319,47 +365,120 @@
     }
 
     @keyframes ripple {
-      0% { transform: scale(0.8); opacity: 0.8; }
-      100% { transform: scale(2.2); opacity: 0; }
+      0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(2.2);
+        opacity: 0;
+      }
     }
 
     .hero-title {
       font-family: var(--font-heading);
-      font-size: clamp(2rem, 5.8vw, 3.2rem);
+      font-size: clamp(2rem, 5.5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.18;
+      line-height: 1.15;
       color: var(--text-main);
       margin-bottom: 12px;
-      word-break: break-word;
     }
 
     .hero-title span {
-      color: var(--primary);
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #4338ca 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-subtitle {
       font-family: var(--font-heading);
-      font-size: clamp(0.98rem, 2.5vw, 1.15rem);
-      font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
+      font-size: clamp(0.98rem, 2.2vw, 1.14rem);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 14px;
       line-height: 1.45;
+      letter-spacing: -0.01em;
     }
 
     .hero-bio {
-      font-size: 0.96rem;
+      font-size: 0.94rem;
       color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 24px;
-      max-width: 580px;
+      line-height: 1.72;
+      margin-bottom: 20px;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* Global justify for body text */
+    .about-text p,
+    .about-text ul,
+    .project-summary,
+    .project-highlights li,
+    .timeline-desc {
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    @media (max-width: 480px) {
+      .section-heading {
+        font-size: clamp(1.3rem, 5.5vw, 1.75rem);
+      }
+
+      .project-title {
+        font-size: 1rem;
+      }
+    }
+
+    .top-skills-highlight {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      width: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .top-skills-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-heading);
+    }
+
+    .top-skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .top-skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       width: 100%;
     }
 
@@ -369,6 +488,7 @@
         font-size: 0.82rem;
         padding: 9px 12px;
       }
+
       .hero-buttons .btn-primary {
         flex: 1 1 100%;
       }
@@ -378,7 +498,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding-top: 18px;
+      padding-top: 16px;
       border-top: 1px solid var(--border-color);
       width: 100%;
     }
@@ -405,7 +525,7 @@
       flex-shrink: 0;
     }
 
-    /* Hero Image */
+    /* Hero Image Card */
     .hero-image-wrapper {
       position: relative;
       display: flex;
@@ -427,7 +547,7 @@
 
     @media (min-width: 900px) {
       .photo-card {
-        max-width: 360px;
+        max-width: 350px;
         padding: 14px;
       }
     }
@@ -435,7 +555,7 @@
     .photo-inner {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1.12;
+      aspect-ratio: 1 / 1.14;
       border-radius: calc(var(--radius-xl) - 4px);
       overflow: hidden;
       background: #e2e8f0;
@@ -447,7 +567,6 @@
       object-fit: cover;
       object-position: center top;
       display: block;
-      transition: transform 0.4s ease;
     }
 
     .photo-badge {
@@ -465,7 +584,7 @@
       gap: 6px;
       white-space: nowrap;
       font-family: var(--font-heading);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.76rem;
       color: var(--text-main);
       max-width: 92%;
@@ -479,9 +598,9 @@
       flex-shrink: 0;
     }
 
-    /* Section Headers */
+    /* Section Global Headers */
     section {
-      padding: 54px 0;
+      padding: 56px 0;
     }
 
     @media (min-width: 768px) {
@@ -507,7 +626,7 @@
 
     .section-heading {
       font-family: var(--font-heading);
-      font-size: clamp(1.6rem, 4vw, 2.05rem);
+      font-size: clamp(1.6rem, 3.8vw, 2.1rem);
       font-weight: 800;
       letter-spacing: -0.025em;
       color: var(--text-main);
@@ -518,8 +637,8 @@
     .section-lead {
       color: var(--text-secondary);
       font-size: 0.98rem;
-      max-width: 660px;
-      line-height: 1.6;
+      max-width: 700px;
+      line-height: 1.62;
     }
 
     /* About Section */
@@ -544,21 +663,16 @@
 
     .about-text p {
       color: var(--text-secondary);
-      font-size: 0.96rem;
-      line-height: 1.74;
+      font-size: 0.95rem;
+      line-height: 1.76;
       margin-bottom: 16px;
+      text-align: justify;
     }
 
     .about-cards-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    @media (min-width: 640px) {
-      .about-cards-grid {
-        gap: 16px;
-      }
+      gap: 14px;
     }
 
     .stat-card {
@@ -584,8 +698,8 @@
     }
 
     .stat-icon-wrap {
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: var(--radius-sm);
       background: var(--primary-subtle);
       color: var(--primary);
@@ -597,23 +711,23 @@
 
     .stat-number {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: var(--text-main);
       letter-spacing: -0.02em;
       line-height: 1.1;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .stat-label {
-      font-size: 0.8rem;
-      font-weight: 600;
+      font-size: 0.82rem;
+      font-weight: 700;
       color: var(--text-secondary);
       line-height: 1.3;
     }
 
     .stat-desc {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       color: var(--text-muted);
       margin-top: 3px;
     }
@@ -639,8 +753,8 @@
 
     @media (min-width: 1024px) {
       .skills-category-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
       }
     }
 
@@ -651,6 +765,8 @@
       padding: 20px;
       box-shadow: var(--shadow-card);
       transition: var(--transition);
+      display: flex;
+      flex-direction: column;
     }
 
     .skill-card:hover {
@@ -700,7 +816,7 @@
       background-color: var(--bg-subtle);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-full);
-      font-size: 0.78rem;
+      font-size: 0.77rem;
       font-weight: 600;
       font-family: var(--font-heading);
       color: var(--text-secondary);
@@ -719,6 +835,42 @@
       border-bottom: 1px solid var(--border-color);
     }
 
+    /* Project Filter Buttons */
+    .project-filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .filter-btn {
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-color);
+      background: var(--bg-white);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      background: var(--bg-subtle);
+      border-color: #cbd5e1;
+      color: var(--text-main);
+    }
+
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(37, 99, 235, 0.25);
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -727,7 +879,7 @@
 
     @media (min-width: 720px) {
       .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
       }
     }
 
@@ -759,6 +911,7 @@
       .project-featured {
         grid-template-columns: 1.18fr 0.92fr;
       }
+
       .featured-left-side {
         border-right: 1px solid var(--border-color);
       }
@@ -771,7 +924,7 @@
     }
 
     .project-header-bar {
-      padding: 14px 18px;
+      padding: 13px 18px;
       background-color: var(--bg-subtle);
       border-bottom: 1px solid var(--border-color);
       display: flex;
@@ -780,39 +933,32 @@
       gap: 8px;
     }
 
-    /* Refined Blue Category Tag */
     .project-category-tag {
       font-family: var(--font-heading);
       font-size: 0.74rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       color: #1d4ed8;
       background: #eff6ff;
       border: 1px solid #dbeafe;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: var(--radius-full);
       white-space: nowrap;
     }
 
     .project-date {
       font-family: var(--font-heading);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       color: var(--text-muted);
       font-weight: 500;
       white-space: nowrap;
     }
 
     .project-body {
-      padding: 18px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-    }
-
-    @media (min-width: 640px) {
-      .project-body {
-        padding: 22px;
-      }
     }
 
     .project-title {
@@ -827,9 +973,32 @@
     .project-summary {
       color: var(--text-secondary);
       font-size: 0.88rem;
-      line-height: 1.65;
-      margin-bottom: 16px;
+      line-height: 1.66;
+      margin-bottom: 14px;
       flex-grow: 1;
+      text-align: justify;
+    }
+
+    .project-highlights {
+      list-style: none;
+      margin-bottom: 14px;
+    }
+
+    .project-highlights li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+
+    .project-highlights li::before {
+      content: '•';
+      position: absolute;
+      left: 3px;
+      color: var(--primary);
+      font-weight: bold;
     }
 
     .project-metrics {
@@ -839,7 +1008,7 @@
       padding: 9px 12px;
       font-size: 0.82rem;
       color: var(--text-main);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -855,18 +1024,19 @@
       padding: 3px 8px;
       border-radius: var(--radius-sm);
       border: 1px solid #bfdbfe;
+      white-space: nowrap;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .project-tag {
-      font-size: 0.74rem;
-      padding: 4px 9px;
+      font-size: 0.73rem;
+      padding: 4px 8px;
       background-color: var(--bg-subtle);
       border-radius: var(--radius-sm);
       color: var(--text-secondary);
@@ -911,7 +1081,7 @@
       color: var(--text-main);
     }
 
-    /* Modern App / Browser Window Showcase Frame */
+    /* Window Showcase Frame */
     .app-window-frame {
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -944,9 +1114,17 @@
       border-radius: 50%;
     }
 
-    .dot-red { background-color: #f87171; }
-    .dot-yellow { background-color: #fbbf24; }
-    .dot-green { background-color: #34d399; }
+    .dot-red {
+      background-color: #f87171;
+    }
+
+    .dot-yellow {
+      background-color: #fbbf24;
+    }
+
+    .dot-green {
+      background-color: #34d399;
+    }
 
     .window-title {
       font-family: var(--font-heading);
@@ -968,11 +1146,10 @@
       overflow: hidden;
     }
 
-    /* Fixed Video Fit to Prevent Zooming on Mobile App Videos */
     .window-content video {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* Full phone screen is visible without zoom! */
+      object-fit: contain;
       display: block;
       background: #020617;
     }
@@ -980,8 +1157,17 @@
     .window-content img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
+      transition: opacity 0.2s ease;
+      background: #0a0f1d;
+    }
+
+    .gallery-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 14px;
     }
 
     .gallery-nav-btn {
@@ -998,13 +1184,18 @@
       white-space: nowrap;
     }
 
+    .gallery-nav-btn:hover {
+      border-color: #cbd5e1;
+      color: var(--text-main);
+    }
+
     .gallery-nav-btn.active {
       background: var(--primary-subtle);
       border-color: var(--primary-border);
       color: var(--primary);
     }
 
-    /* Experience & Education */
+    /* Experience & Education (Journey) */
     .journey-section {
       background-color: var(--bg-body);
       border-bottom: 1px solid var(--border-color);
@@ -1087,6 +1278,12 @@
       transition: var(--transition);
     }
 
+    .timeline-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
     .timeline-date {
       font-size: 0.74rem;
       font-weight: 700;
@@ -1145,7 +1342,7 @@
       background: var(--bg-body);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 20px;
+      padding: 22px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 28px;
@@ -1226,7 +1423,7 @@
     }
 
     .contact-icon-li {
-      background-color: #0077b5;
+      background-color: #0a66c2;
       color: #ffffff;
     }
 
@@ -1254,19 +1451,12 @@
       text-overflow: ellipsis;
     }
 
-    /* Contact Form */
     .contact-form {
-      background-color: var(--bg-white);
+      background: var(--bg-white);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: var(--shadow-card);
-    }
-
-    @media (min-width: 640px) {
-      .contact-form {
-        padding: 26px;
-      }
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
     }
 
     .form-group {
@@ -1275,40 +1465,43 @@
 
     .form-label {
       display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
       font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.82rem;
-      color: var(--text-main);
-      margin-bottom: 5px;
     }
 
-    .form-input, .form-textarea {
+    .form-input,
+    .form-textarea {
       width: 100%;
-      padding: 9px 12px;
+      padding: 10px 14px;
+      background: var(--bg-body);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-sm);
       font-family: var(--font-body);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-main);
-      background-color: var(--bg-white);
       transition: var(--transition);
+      outline: none;
     }
 
-    .form-input:focus, .form-textarea:focus {
-      outline: none;
+    .form-input:focus,
+    .form-textarea:focus {
+      background: #ffffff;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+      box-shadow: 0 0 0 3px var(--primary-subtle);
     }
 
     .form-textarea {
-      min-height: 100px;
+      min-height: 105px;
       resize: vertical;
     }
 
     /* Footer */
     footer {
       background-color: var(--bg-white);
-      padding: 28px 0;
+      padding: 26px 0;
       border-top: 1px solid var(--border-color);
     }
 
@@ -1317,137 +1510,90 @@
       flex-direction: column;
       gap: 14px;
       align-items: center;
+      justify-content: space-between;
       text-align: center;
-      font-size: 0.84rem;
-      color: var(--text-muted);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 640px) {
       .footer-inner {
         flex-direction: row;
-        justify-content: space-between;
         text-align: left;
       }
     }
 
+    .footer-left {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
     .footer-links {
       display: flex;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      list-style: none;
     }
 
     .footer-links a {
-      text-decoration: none;
+      font-size: 0.82rem;
       color: var(--text-secondary);
+      text-decoration: none;
       transition: var(--transition);
+      font-weight: 500;
     }
 
     .footer-links a:hover {
       color: var(--primary);
     }
-
-    /* Mobile Menu Drawer */
-    @media (max-width: 899px) {
-      .nav-menu {
-        display: none;
-      }
-
-      .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 68px;
-        left: 0;
-        right: 0;
-        background: var(--bg-white);
-        border-bottom: 1px solid var(--border-color);
-        padding: 20px;
-        box-shadow: var(--shadow-lg);
-        gap: 14px;
-        align-items: stretch;
-      }
-
-      .nav-menu.active li {
-        width: 100%;
-      }
-
-      .nav-menu.active a {
-        display: block;
-        padding: 8px 12px;
-        border-radius: var(--radius-sm);
-        font-size: 0.95rem;
-      }
-
-      .nav-menu.active a:active,
-      .nav-menu.active a:hover {
-        background: var(--bg-subtle);
-      }
-
-      .mobile-toggle {
-        display: block;
-      }
-
-      .desktop-only-btn {
-        display: none !important;
-      }
-    }
-
-    @media (min-width: 900px) {
-      .mobile-menu-actions {
-        display: none !important;
-      }
-    }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
   <header>
     <div class="container nav-inner">
-      <a href="#hero" class="nav-brand" id="brand-link">
+      <a href="#hero" class="nav-brand">
         <img src="profile.jpg" alt="Ramesha Dasangi" class="nav-avatar-mini" />
         <div class="nav-brand-text">
           <span class="nav-name">Ramesha Dasangi</span>
-          <span class="nav-role">Software Engineering Student</span>
+          <span class="nav-role">Software Engineering Student · NIBM</span>
         </div>
       </a>
 
-      <!-- Menu for Desktop and Mobile Slide-Down -->
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#journey">Journey</a></li>
         <li><a href="#contact">Contact</a></li>
-        
-        <li class="mobile-menu-actions" style="display: flex; flex-direction: column; gap: 8px; padding-top: 10px; border-top: 1px solid var(--border-color);">
-          <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm" style="width: 100%;">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            GitHub Profile
-          </a>
-          <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            LinkedIn Profile
-          </a>
-        </li>
       </ul>
 
       <div class="nav-actions">
-        <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm desktop-only-btn" id="nav-github-btn" title="GitHub Profile">
-          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer"
+          class="btn btn-github btn-sm" title="GitHub Profile">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm desktop-only-btn" id="nav-linkedin-btn">
-          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+          class="btn btn-linkedin btn-sm" title="LinkedIn Profile">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
           LinkedIn
         </a>
-        <a href="#contact" class="btn btn-primary btn-sm" id="nav-contact-btn">Contact</a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
       </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -1457,7 +1603,7 @@
       <div class="hero-content">
         <div class="status-badge">
           <span class="status-dot"></span>
-          <span>Open to Software Engineering Internships</span>
+          <span>Open to Internships, Collaborations & Professional Opportunities</span>
         </div>
 
         <h1 class="hero-title">
@@ -1465,40 +1611,63 @@
         </h1>
 
         <p class="hero-subtitle">
-          Software Engineering Student at NIBM · Mobile, Web & Applied Machine Learning
+          Software Engineering HND Student @ NIBM | Aspiring Software Developer | Java, Android & Web Development
         </p>
 
         <p class="hero-bio">
-          I am a dedicated Software Engineering student pursuing my Higher National Diploma (HND) at NIBM Sri Lanka. I enjoy architecting reliable software solutions across Java, Android, Web platforms, and practical Machine Learning applications.
+          Passionate and motivated Software Engineering student at <strong>NIBM Sri Lanka</strong> with hands-on
+          experience designing and engineering desktop applications, predictive machine learning systems, native Android
+          platforms, robotics automation, and full-stack web solutions. Driven by structured logic, algorithmic
+          problem-solving, and transforming real-world ideas into reliable software products.
         </p>
 
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary" id="hero-view-work">
-            View Projects
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            Explore Projects
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
           </a>
-          <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="hero-github">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-github"
+            id="hero-github">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="hero-linkedin">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+            class="btn btn-linkedin" id="hero-linkedin">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
             LinkedIn
           </a>
         </div>
 
         <div class="hero-meta">
           <div class="meta-item">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
             Galle, Sri Lanka
           </div>
           <div class="meta-item">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
             NIBM HND Candidate
           </div>
           <div class="meta-item">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <a href="mailto:rameshadasangi4@gmail.com" style="color:inherit; text-decoration:none; font-weight:600;">rameshadasangi4@gmail.com</a>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <a href="mailto:rameshadasangi4@gmail.com"
+              style="color:inherit; text-decoration:none; font-weight:600;">rameshadasangi4@gmail.com</a>
           </div>
         </div>
       </div>
@@ -1522,58 +1691,100 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">About Me</span>
-        <h2 class="section-heading">Passionate about building reliable, practical software</h2>
-        <p class="section-lead">A glimpse into my academic background, technical focus, and analytical foundation.</p>
+        <h2 class="section-heading">Passionate about solving real-world challenges with software</h2>
+        <p class="section-lead">A driven engineering student transforming academic theory into practical, user-centric
+          software solutions.</p>
       </div>
 
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a motivated Software Engineering student at the <strong>National Institute of Business Management (NIBM)</strong>. Having successfully completed my Diploma in Software Engineering, I am now continuing my studies in the Higher National Diploma (HND) program to further develop enterprise software design, mobile computing, and machine learning skillsets.
+            I am a passionate and motivated Software Engineering student at the <strong>National Institute of Business
+              Management (NIBM)</strong>. Having successfully completed my Diploma in Software Engineering, I am
+            currently pursuing my <strong>Higher National Diploma in Software Engineering
+              (HNDSE)</strong> to advance my technical, architectural, and analytical capabilities.
           </p>
           <p>
-            My engineering work is rooted in structured logic, clean architecture, and practical problem-solving. Over the past several semesters, I have engineered applications ranging from predictive machine learning models with Flask REST APIs to native multi-role Android applications with Firebase, full-stack database portals using PHP and MySQL, and systems programming in C and Java.
+            My engineering work bridges software theory with practical, production-level implementation. Over the course
+            of my academic journey, I have engineered diverse software solutions:
           </p>
+          <ul
+            style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; padding-left: 20px; margin-bottom: 16px;">
+            <li style="margin-bottom: 8px;"><strong>Desktop & Algorithms:</strong> Architected RouteWise, an
+              urban delivery route optimization engine using custom Min-Heap Dijkstra's shortest path algorithms, Binary
+              Search Trees for O(log n) package tracking, QuickSort, and real-time Big-O complexity benchmarking built
+              from scratch in Java 17 and JavaFX.</li>
+            <li style="margin-bottom: 8px;"><strong>Applied Machine Learning:</strong> Engineered an end-to-end
+              predictive forecasting and menu analytics web application for Tigri Beach Restaurant, combining
+              Random Forest regression (R² = 0.9175), K-Means clustering, and a Python Flask REST API to reduce seafood
+              waste.</li>
+            <li style="margin-bottom: 8px;"><strong>Mobile Computing:</strong> Developed PharmaGo, a multi-role
+              native Android healthcare platform integrating Firebase Cloud Firestore, OSMDroid live GPS pharmacy
+              mapping, prescription uploads, digital signature capture, and automated PDF reporting.</li>
+            <li style="margin-bottom: 8px;"><strong>Robotics & Hardware:</strong> Designed and prototyped the
+              Automatic Coconut Husking & Sorting System, implementing Arduino Uno embedded C++ control, IR
+              obstacle sensor yield counting, metal gear servo actuation, and PCF8574 I2C telemetry alongside digital
+              logic circuits like the 4-bit binary adder.
+            </li>
+            <li style="margin-bottom: 8px;"><strong>Web Platforms & Systems:</strong> Built full-stack platforms
+              including CycloTrek Adventures with PHP and MySQL, low-level systems programming in C, and
+              scalable enterprise network topologies in Cisco Packet Tracer.</li>
+          </ul>
           <p>
-            Alongside my studies, I have worked as an independent mathematics tutor for over 3 years. This experience has deepened my analytical mindset, patience, and ability to break down complex problems into clear, solvable components.
+            Alongside engineering, my ongoing work as an independent Mathematics Tutor since January 2023 has reinforced
+            my structured problem-solving mindset, algorithmic discipline, and ability to break down intricate technical
+            challenges into clear, elegant solutions. My objective is to contribute as a Software Engineering Intern to
+            innovative engineering teams while continuing to grow professionally.
           </p>
         </div>
 
         <div class="about-cards-grid">
           <div class="stat-card">
             <div class="stat-icon-wrap">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
             </div>
-            <div class="stat-number">NIBM</div>
+            <div class="stat-number">HNDSE</div>
             <div class="stat-label">Higher National Diploma</div>
-            <div class="stat-desc">Software Engineering (Current)</div>
+            <div class="stat-desc">NIBM Sri Lanka (Sep 2025 – Present)</div>
           </div>
 
           <div class="stat-card">
             <div class="stat-icon-wrap">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
             </div>
             <div class="stat-number">Diploma</div>
             <div class="stat-label">Software Engineering</div>
-            <div class="stat-desc">Completed with strong foundation</div>
+            <div class="stat-desc">NIBM Completed</div>
           </div>
 
           <div class="stat-card">
             <div class="stat-icon-wrap">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
             </div>
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Projects Built</div>
-            <div class="stat-desc">ML, Android, Web & Systems</div>
+            <div class="stat-number">11+</div>
+            <div class="stat-label">Engineered Projects</div>
+            <div class="stat-desc">Java, ML, Android, Robotics, Web & Systems</div>
           </div>
 
           <div class="stat-card">
             <div class="stat-icon-wrap">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
             </div>
             <div class="stat-number">3+ Yrs</div>
             <div class="stat-label">Mathematics Tutor</div>
-            <div class="stat-desc">Analytical & logic coaching</div>
+            <div class="stat-desc">Analytical problem solving & logic coaching</div>
           </div>
         </div>
       </div>
@@ -1584,139 +1795,322 @@
   <section class="skills-section" id="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Skillset</span>
-        <h2 class="section-heading">Technologies & Frameworks</h2>
-        <p class="section-lead">A structured overview of the programming languages, tools, and paradigms I apply in my work.</p>
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-heading">Skills, Frameworks & Tooling</h2>
+        <p class="section-lead">A comprehensive categorization of technical proficiencies across software development,
+          algorithms, mobile computing, and hardware engineering.</p>
       </div>
 
       <div class="skills-category-grid">
+        <!-- Top Core Skills -->
+        <div class="skill-card"
+          style="border-color: #bfdbfe; background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%);">
+          <div class="skill-card-header">
+            <div class="skill-card-icon" style="background: #dbeafe; color: #1d4ed8;">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <h3 class="skill-card-title" style="color: #1e40af;">Core Technical Strengths</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill"
+              style="background: #ffffff; border-color: #bfdbfe; color: #1d4ed8; font-weight: 700;">Android
+              Development</span>
+            <span class="tech-pill"
+              style="background: #ffffff; border-color: #bfdbfe; color: #1d4ed8; font-weight: 700;">Java</span>
+            <span class="tech-pill"
+              style="background: #ffffff; border-color: #bfdbfe; color: #1d4ed8; font-weight: 700;">Object-Oriented
+              Programming</span>
+            <span class="tech-pill"
+              style="background: #ffffff; border-color: #bfdbfe; color: #1d4ed8; font-weight: 700;">GitHub</span>
+            <span class="tech-pill"
+              style="background: #ffffff; border-color: #bfdbfe; color: #1d4ed8; font-weight: 700;">Database Management
+              (DBMS)</span>
+          </div>
+        </div>
+
         <!-- Languages -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-card-icon">
-              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
             </div>
-            <h3 class="skill-card-title">Languages</h3>
+            <h3 class="skill-card-title">Programming Languages</h3>
           </div>
           <div class="pill-list">
-            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Java 17</span>
             <span class="tech-pill">Python</span>
-            <span class="tech-pill">Dart</span>
             <span class="tech-pill">C</span>
+            <span class="tech-pill">Dart</span>
             <span class="tech-pill">JavaScript</span>
-            <span class="tech-pill">C#</span>
             <span class="tech-pill">PHP</span>
             <span class="tech-pill">SQL</span>
+            <span class="tech-pill">C#</span>
+            <span class="tech-pill">C++ (Arduino)</span>
           </div>
         </div>
 
-        <!-- Mobile & Web -->
+        <!-- Mobile & Android -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-card-icon">
-              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
             </div>
-            <h3 class="skill-card-title">Mobile & Web</h3>
+            <h3 class="skill-card-title">Mobile Development</h3>
           </div>
           <div class="pill-list">
             <span class="tech-pill">Android Studio</span>
-            <span class="tech-pill">Firebase Realtime DB</span>
-            <span class="tech-pill">HTML5 & CSS3</span>
-            <span class="tech-pill">Flask (Python)</span>
-            <span class="tech-pill">Bootstrap 5</span>
+            <span class="tech-pill">Firebase Auth</span>
+            <span class="tech-pill">Cloud Firestore</span>
+            <span class="tech-pill">Realtime Database</span>
             <span class="tech-pill">OSMDroid Maps</span>
-            <span class="tech-pill">REST APIs</span>
+            <span class="tech-pill">Google Location Services</span>
+            <span class="tech-pill">Material Design</span>
+            <span class="tech-pill">Glide Image Loading</span>
+            <span class="tech-pill">PDF Generation</span>
+            <span class="tech-pill">Custom Signature View</span>
           </div>
         </div>
 
-        <!-- ML & Data -->
+        <!-- Data Structures & Algorithms -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-card-icon">
-              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Data Structures & Algorithms</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">Dijkstra's Algorithm</span>
+            <span class="tech-pill">Min-Heap Priority Queue</span>
+            <span class="tech-pill">Binary Search Trees (BST)</span>
+            <span class="tech-pill">QuickSort</span>
+            <span class="tech-pill">Doubly Linked Lists</span>
+            <span class="tech-pill">Circular Linked Lists</span>
+            <span class="tech-pill">Big-O Benchmarking</span>
+            <span class="tech-pill">Weighted Graph Networks</span>
+          </div>
+        </div>
+
+        <!-- Web & Full Stack -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Web & Databases</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">HTML5 & CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">PHP</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">Bootstrap 5</span>
+            <span class="tech-pill">Flask REST API</span>
+            <span class="tech-pill">Figma UI/UX</span>
+            <span class="tech-pill">Session & Cookie Mgmt</span>
+            <span class="tech-pill">Chart.js</span>
+          </div>
+        </div>
+
+        <!-- ML & Data Science -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
             </div>
             <h3 class="skill-card-title">Machine Learning & Data</h3>
           </div>
           <div class="pill-list">
-            <span class="tech-pill">Random Forest</span>
-            <span class="tech-pill">Decision Trees</span>
+            <span class="tech-pill">Random Forest Regressor</span>
             <span class="tech-pill">K-Means Clustering</span>
+            <span class="tech-pill">Decision Tree Regression</span>
             <span class="tech-pill">Linear Regression</span>
-            <span class="tech-pill">Chart.js Visualizations</span>
             <span class="tech-pill">Scikit-Learn</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">Feature Engineering</span>
+            <span class="tech-pill">GridSearchCV Tuning</span>
+            <span class="tech-pill">Predictive Analytics</span>
           </div>
         </div>
 
-        <!-- Tools & Practices -->
+        <!-- Robotics, IoT & Digital Systems -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-card-icon">
-              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
             </div>
-            <h3 class="skill-card-title">Engineering Tools</h3>
+            <h3 class="skill-card-title">Robotics & Hardware</h3>
+          </div>
+          <div class="pill-list">
+            <span class="tech-pill">Arduino Uno</span>
+            <span class="tech-pill">Embedded C++</span>
+            <span class="tech-pill">IR Obstacle Sensors</span>
+            <span class="tech-pill">Metal Gear Servos</span>
+            <span class="tech-pill">PCF8574 I2C Expander</span>
+            <span class="tech-pill">LM016L 16x2 LCD</span>
+            <span class="tech-pill">Proteus Circuit Design</span>
+            <span class="tech-pill">Boolean Logic</span>
+            <span class="tech-pill">4-Bit Adder Design</span>
+          </div>
+        </div>
+
+        <!-- Software Engineering & Tools -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Architecture & Tools</h3>
           </div>
           <div class="pill-list">
             <span class="tech-pill">Git & GitHub</span>
-            <span class="tech-pill">MySQL</span>
-            <span class="tech-pill">OOP Architecture</span>
-            <span class="tech-pill">Figma UI Design</span>
+            <span class="tech-pill">OOP Principles</span>
             <span class="tech-pill">UML Diagrams</span>
-            <span class="tech-pill">Network VLANs</span>
+            <span class="tech-pill">Agile Practices</span>
+            <span class="tech-pill">Apache Maven</span>
+            <span class="tech-pill">Cisco Packet Tracer</span>
+            <span class="tech-pill">VLAN Segmentation</span>
+            <span class="tech-pill">Network Security & ACLs</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects -->
+  <!-- Projects Section -->
   <section class="projects-section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Featured Work</span>
-        <h2 class="section-heading">Engineered Projects</h2>
-        <p class="section-lead">Practical applications covering applied machine learning, native Android development, and database architecture.</p>
+        <span class="section-tag">Portfolio Showcase</span>
+        <h2 class="section-heading">Featured & Academic Projects</h2>
+        <p class="section-lead">A complete showcase of software systems, algorithms, machine learning models, mobile
+          applications, and robotics hardware built throughout my academic career at NIBM.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filter-tabs">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (11)</button>
+        <button class="filter-btn" onclick="filterProjects('featured', this)">★ Flagship Work</button>
+        <button class="filter-btn" onclick="filterProjects('algorithms', this)">Desktop & Algorithms</button>
+        <button class="filter-btn" onclick="filterProjects('ml', this)">Machine Learning</button>
+        <button class="filter-btn" onclick="filterProjects('mobile', this)">Android Mobile</button>
+        <button class="filter-btn" onclick="filterProjects('robotics', this)">Robotics & Hardware</button>
+        <button class="filter-btn" onclick="filterProjects('web', this)">Web & Databases</button>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Featured ML Project -->
-        <div class="project-card project-featured">
+
+        <!-- PROJECT 1: RouteWise (FEATURED FLAGSHIP) -->
+        <div class="project-card project-featured" data-categories="featured algorithms desktop">
           <div class="project-body featured-left-side">
-            <div class="project-header-bar" style="margin: -18px -18px 16px; border-radius: 0;">
-              <span class="project-category-tag">Machine Learning · Featured</span>
-              <span class="project-date">Aug 2026</span>
+            <div class="project-header-bar" style="margin: -20px -20px 16px; border-radius: 0;">
+              <span class="project-category-tag">Algorithms & Data Structures · Flagship</span>
+              <span class="project-date">Java 17 · JavaFX 21</span>
             </div>
-            <h3 class="project-title">Tigri Beach Restaurant — ML Sales & Order Demand Forecasting</h3>
+            <h3 class="project-title">RouteWise — Delivery Route & Logistics Optimization Platform</h3>
             <p class="project-summary">
-              An end-to-end predictive analytics and revenue forecasting platform built for Tigri Beach Restaurant & Bar (Hikkaduwa). Utilizes a Random Forest Regressor trained on seasonal ordering cycles to predict daily customer volume and order demand. Implements K-Means Clustering on menu items to categorize profitability and order frequency.
+              RouteWise is an advanced desktop application built to solve real-world urban delivery and logistics
+              challenges across Sri Lanka. The platform models Sri Lankan road networks as a weighted graph and computes
+              optimal turn-by-turn delivery routes using Dijkstra's Algorithm with a custom Min-Heap Priority Queue —
+              dynamically factoring in live traffic congestion levels (Normal / Moderate / Heavy).
             </p>
+
+            <ul class="project-highlights">
+              <li><strong>Custom Min-Heap Dijkstra Engine:</strong> All core algorithms and data structures built
+                entirely from scratch without standard Java Collections.</li>
+              <li><strong>Binary Search Tree (BST):</strong> Implements O(log n) package tracking and in-order traversal
+                for inventory management.</li>
+              <li><strong>QuickSort Engine:</strong> Prioritizes orders dynamically based on package urgency score and
+                emergency status.</li>
+              <li><strong>Doubly & Circular Linked Lists:</strong> Powers step-by-step turn navigation and continuous
+                24/7 patrol shift simulations.</li>
+              <li><strong>Real-Time Big-O Benchmarking:</strong> Features a live execution performance workbench
+                comparing custom structures against native Java collections.</li>
+              <li><strong>Dynamic Canvas UI:</strong> Interactive Sri Lanka delivery network map with animated delivery
+                truck and Glassmorphism design.</li>
+            </ul>
+
             <div class="project-metrics">
-              <span class="metric-chip">R² = 0.9175</span>
-              <span>Evaluated accuracy · 15–20% estimated food waste reduction</span>
+              <span class="metric-chip">Big-O Benchmarking</span>
+              <span>O(log n) BST Lookup · Custom Min-Heap Dijkstra · Live Traffic Multiplier</span>
             </div>
+
             <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Flask REST API</span>
-              <span class="project-tag">RandomForestRegressor</span>
-              <span class="project-tag">K-Means</span>
-              <span class="project-tag">Chart.js</span>
+              <span class="project-tag">Java 17</span>
+              <span class="project-tag">JavaFX 21</span>
+              <span class="project-tag">Dijkstra's Algorithm</span>
+              <span class="project-tag">Min-Heap PQ</span>
+              <span class="project-tag">BST</span>
+              <span class="project-tag">QuickSort</span>
+              <span class="project-tag">Doubly Linked List</span>
+              <span class="project-tag">Circular List</span>
+              <span class="project-tag">Maven</span>
             </div>
+
             <div class="project-footer">
-              <span style="font-size: 0.8rem; color: var(--text-muted);">NIBM Academic Capstone</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">NIBM PDSA Coursework</span>
               <div class="project-links-group">
-                <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
-                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  Repository
+                <a href="https://github.com/Ramesha-Dasangi/RouteWise" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-github btn-sm">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View GitHub Repository
                 </a>
-                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-ml">
-                  LinkedIn Overview
-                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
                 </a>
               </div>
             </div>
           </div>
 
           <div class="project-body" style="background-color: var(--bg-body); display: flex; flex-direction: column;">
-            <!-- Modern Mockup Window for Tigri ML Dashboard -->
             <div class="app-window-frame">
               <div class="window-header">
                 <div class="window-dots">
@@ -1724,49 +2118,194 @@
                   <span class="dot dot-yellow"></span>
                   <span class="dot dot-green"></span>
                 </div>
-                <span class="window-title">tigri-analytics-dashboard.py • live preview</span>
+                <span class="window-title">RouteWise Desktop App • JavaFX Live Interactive UI</span>
               </div>
               <div class="window-content">
-                <img id="tigri-main-img" src="tigri_dashboard.png" alt="Tigri Beach Restaurant AI Hub Dashboard" />
+                <img id="routewise-img" src="routewise_1.jpg" alt="RouteWise Map Simulator" />
               </div>
             </div>
 
-            <!-- Screenshot Selector Tabs -->
-            <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px;">
-              <button type="button" class="gallery-nav-btn active" onclick="switchTigriImg('tigri_dashboard.png', this)">Dashboard</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_prediction.png', this)">Prediction API</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_charts.png', this)">Sales Trends</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_insights.png', this)">Menu Analytics</button>
-              <button type="button" class="gallery-nav-btn" onclick="switchTigriImg('tigri_clustering.png', this)">Clustering</button>
+            <!-- Gallery Buttons -->
+            <div class="gallery-nav-bar">
+              <button type="button" class="gallery-nav-btn active"
+                onclick="switchGalleryImg('routewise-img', 'routewise_1.jpg', this)">Route Map & Simulator</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('routewise-img', 'routewise_2.jpg', this)">BST Package Inventory</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('routewise-img', 'routewise_3.jpg', this)">DLL & Circular Patrol</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('routewise-img', 'routewise_4.jpg', this)">Big-O Benchmark Lab</button>
             </div>
-            
-            <h4 style="font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">Technical Implementation</h4>
-            <ul style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.55; padding-left: 16px; margin-bottom: 14px;">
-              <li><strong>Demand Forecasting:</strong> Scikit-learn Random Forest model trained on multivariate seasonal features.</li>
-              <li><strong>K-Means Clustering:</strong> Menu grouping by revenue contribution and order volume.</li>
-              <li><strong>REST Architecture:</strong> Flask endpoints serving dynamic chart payloads to frontend Chart.js components.</li>
+
+            <h4
+              style="font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">
+              Architecture Highlights</h4>
+            <ul
+              style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.55; padding-left: 16px; margin-bottom: 14px;">
+              <li><strong>Custom MinHeap (O(log n)):</strong> Extracts shortest delivery vertex dynamically during
+                Dijkstra execution.</li>
+              <li><strong>Theoretical vs Practical:</strong> Live workbench displays theoretical complexity reference
+                table alongside nano-second execution graphs.</li>
+              <li><strong>Glassmorphism UI:</strong> Modern light/dark mode with customized CSS layout tokens in JavaFX.
+              </li>
             </ul>
 
-            <div style="margin-top: auto; padding: 10px 12px; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+            <div
+              style="margin-top: auto; padding: 10px 14px; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <div style="font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Repository</div>
-                <div style="font-size: 0.82rem; color: var(--primary); font-weight: 700; font-family: var(--font-heading);">restaurant-sales-demand-ml</div>
+                <div style="font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">
+                  Repository</div>
+                <div
+                  style="font-size: 0.82rem; color: var(--primary); font-weight: 700; font-family: var(--font-heading);">
+                  Ramesha-Dasangi/RouteWise</div>
               </div>
-              <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">
-                GitHub ↗
+              <a href="https://github.com/Ramesha-Dasangi/RouteWise" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline btn-sm">
+                Explore Code ↗
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 2: PharmaGo (Fixed Video: object-fit: contain) -->
-        <div class="project-card">
+        <!-- PROJECT 2: Tigri Beach Restaurant ML (FEATURED FLAGSHIP) -->
+        <div class="project-card project-featured" data-categories="featured ml web">
+          <div class="project-body featured-left-side">
+            <div class="project-header-bar" style="margin: -20px -20px 16px; border-radius: 0;">
+              <span class="project-category-tag">Machine Learning & Analytics · Flagship</span>
+              <span class="project-date">Python Flask · Scikit-Learn</span>
+            </div>
+            <h3 class="project-title">Machine Learning Revenue Forecasting & Menu Analytics System</h3>
+            <p class="project-summary">
+              Developed an end-to-end Machine Learning web application for <strong>Tigri Beach Restaurant</strong>
+              (Hikkaduwa) to address volatile daily revenue fluctuations and reduce perishable seafood waste through
+              data-driven demand forecasting and menu segmentation.
+            </p>
+
+            <ul class="project-highlights">
+              <li><strong>Revenue Forecasting:</strong> Engineered 7 domain-specific features from 308 POS bills and
+                evaluated Linear Regression, Decision Tree, and Random Forest models.</li>
+              <li><strong>Best Model Performance:</strong> Achieved an <strong>R² score of 0.9175</strong> and
+                <strong>MAE of Rs. 1,393.37</strong> using Random Forest Regressor with 5-Fold Cross-Validation and
+                GridSearchCV hyperparameter tuning.
+              </li>
+              <li><strong>Menu Segmentation:</strong> Applied K-Means Clustering (K=3) with StandardScaler on 30 menu
+                items, categorizing dishes into High-Demand, Steady-Selling, and Low-Demand groups.</li>
+              <li><strong>UI/UX & Figma Design:</strong> Designed responsive executive dashboard and user interface in
+                Figma for interactive business intelligence.</li>
+              <li><strong>Full-Stack REST Architecture:</strong> Built a Python Flask REST API integrated with HTML5,
+                CSS3, JavaScript, and Chart.js dashboards for live model inference and analytics.</li>
+              <li><strong>Measurable Business Impact:</strong> Reduced estimated seafood waste by 15–20% and identified
+                weekend demand surges where over 62% of weekly revenue was generated.</li>
+            </ul>
+
+            <div class="project-metrics">
+              <span class="metric-chip">R² = 0.9175</span>
+              <span>MAE = Rs. 1,393.37 · 15–20% Seafood Waste Reduction</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Flask REST API</span>
+              <span class="project-tag">Scikit-Learn</span>
+              <span class="project-tag">Random Forest</span>
+              <span class="project-tag">K-Means Clustering</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">Feature Engineering</span>
+              <span class="project-tag">Chart.js</span>
+              <span class="project-tag">Figma</span>
+            </div>
+
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Applied ML Project</span>
+              <div class="project-links-group">
+                <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-github btn-sm">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View GitHub Repository
+                </a>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body" style="background-color: var(--bg-body); display: flex; flex-direction: column;">
+            <div class="app-window-frame">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">tigri-analytics-dashboard • Live Flask ML App</span>
+              </div>
+              <div class="window-content">
+                <img id="tigri-img" src="tigri_dashboard.png" alt="Tigri ML Dashboard" />
+              </div>
+            </div>
+
+            <!-- Gallery Buttons -->
+            <div class="gallery-nav-bar">
+              <button type="button" class="gallery-nav-btn active"
+                onclick="switchGalleryImg('tigri-img', 'tigri_dashboard.png', this)">Executive Dashboard</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('tigri-img', 'tigri_prediction.png', this)">Revenue Prediction API</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('tigri-img', 'tigri_charts.png', this)">Demand Trends</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('tigri-img', 'tigri_insights.png', this)">Menu Analytics</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('tigri-img', 'tigri_clustering.png', this)">K-Means Clusters</button>
+            </div>
+
+            <h4
+              style="font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px; font-weight: 700;">
+              Data Science Pipeline</h4>
+            <ul
+              style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.55; padding-left: 16px; margin-bottom: 14px;">
+              <li><strong>Data Preparation:</strong> Processed real customer bills with day-of-week, rain index, and
+                holiday indicators.</li>
+              <li><strong>Feature Engineering:</strong> StandardScaler normalization on high-variance culinary order
+                volumes.</li>
+              <li><strong>Dynamic Inference:</strong> Flask API returns prediction payload visualized instantly via
+                Chart.js.</li>
+            </ul>
+
+            <div
+              style="margin-top: auto; padding: 10px 14px; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">
+                  Repository</div>
+                <div
+                  style="font-size: 0.82rem; color: var(--primary); font-weight: 700; font-family: var(--font-heading);">
+                  restaurant-sales-demand-ml</div>
+              </div>
+              <a href="https://github.com/Ramesha-Dasangi/restaurant-sales-demand-ml" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                Explore Code ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: PharmaGo (FEATURED ANDROID APP) -->
+        <div class="project-card" data-categories="featured mobile">
           <div class="project-header-bar">
-            <span class="project-category-tag">Android Mobile App</span>
-            <span class="project-date">Jun–Aug 2026</span>
+            <span class="project-category-tag">Native Android · Multi-Role</span>
+            <span class="project-date">NIBM MAD Capstone</span>
           </div>
           <div class="project-body">
-            <!-- Modern Mockup Window for PharmaGo Video with object-fit: contain -->
+            <!-- Video Player Window -->
             <div class="app-window-frame">
               <div class="window-header">
                 <div class="window-dots">
@@ -1786,39 +2325,68 @@
 
             <h3 class="project-title">PharmaGo — Android Pharmacy Finder Application</h3>
             <p class="project-summary">
-              A native Java Android application connecting patients, registered pharmacies, delivery riders, and administrators. Supports GPS proximity search, real-time medicine inventory inquiries, secure prescription uploads, and live order dispatch tracking via OSMDroid.
+              A comprehensive multi-role Android application developed for the Mobile Application Development module at
+              NIBM. PharmaGo unifies customers, pharmacy managers, dispatch delivery riders, and platform admins in one
+              seamless healthcare mobile ecosystem.
             </p>
+
+            <ul class="project-highlights">
+              <li><strong>Nearby Pharmacy GPS:</strong> Real-time distance calculation and interactive map integration
+                via OSMDroid and Android Geocoder.</li>
+              <li><strong>Live Inventory & Comparison:</strong> Real-time medicine stock status and transparent price
+                comparison across local pharmacies.</li>
+              <li><strong>Digital Prescriptions:</strong> Secure image upload and direct order processing pipeline with
+                Firebase Storage.</li>
+              <li><strong>Dispatch & Verification:</strong> Live map delivery tracking and digital touch-signature
+                capture upon hand-off.</li>
+              <li><strong>Administrative Suite:</strong> Automated PDF sales reporting, rider management, and customer
+                complaint resolution.</li>
+            </ul>
+
             <div class="project-tags">
               <span class="project-tag">Java</span>
               <span class="project-tag">Android Studio</span>
-              <span class="project-tag">Firebase</span>
-              <span class="project-tag">OSMDroid</span>
+              <span class="project-tag">Firebase Auth</span>
+              <span class="project-tag">Cloud Firestore</span>
+              <span class="project-tag">Realtime DB</span>
+              <span class="project-tag">OSMDroid Maps</span>
               <span class="project-tag">Material Design</span>
+              <span class="project-tag">Glide</span>
+              <span class="project-tag">PDF Generation</span>
             </div>
+
             <div class="project-footer">
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Android Application</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">MAD Project</span>
               <div class="project-links-group">
-                <a href="https://github.com/Ramesha-Dasangi/PharmaGo-MAD-Project" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  GitHub
+                <a href="https://github.com/Ramesha-Dasangi/PharmaGo-MAD-Project" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-github btn-sm">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub Repository
                 </a>
-                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-pharmago">
-                  Overview
-                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Project 3: CycloTrek -->
-        <div class="project-card">
+        <!-- PROJECT 4: Automatic Coconut Husking System (ROBOTICS & EMBEDDED) -->
+        <div class="project-card" data-categories="featured robotics">
           <div class="project-header-bar">
-            <span class="project-category-tag">Web & Relational DB</span>
-            <span class="project-date">Diploma Final</span>
+            <span class="project-category-tag">Robotics & Automation · HND Project</span>
+            <span class="project-date">Arduino Uno · Embedded C++</span>
           </div>
           <div class="project-body">
-            <!-- Modern Mockup Window for CycloTrek Video -->
+            <!-- Gallery Window -->
             <div class="app-window-frame">
               <div class="window-header">
                 <div class="window-dots">
@@ -1826,7 +2394,96 @@
                   <span class="dot dot-yellow"></span>
                   <span class="dot dot-green"></span>
                 </div>
-                <span class="window-title">CycloTrek Adventures • Web Portal</span>
+                <span class="window-title">Automatic Coconut Husking System • Hardware Prototype</span>
+              </div>
+              <div class="window-content">
+                <img id="coconut-img" src="coconut_design.jpg" alt="Coconut Husking System Design" />
+              </div>
+            </div>
+
+            <!-- Gallery Buttons -->
+            <div class="gallery-nav-bar">
+              <button type="button" class="gallery-nav-btn active"
+                onclick="switchGalleryImg('coconut-img', 'coconut_design.jpg', this)">System Architecture</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('coconut-img', 'coconut_circuit.jpg', this)">Proteus Circuit</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('coconut-img', 'coconut_machine_1.jpg', this)">Machine Prototype</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('coconut-img', 'coconut_machine_2.jpg', this)">Roller Mechanism</button>
+            </div>
+
+            <h3 class="project-title">Automatic Coconut Husking & Sorting Control System</h3>
+            <p class="project-summary">
+              Engineered an automated agricultural processing and control system for the Robotics Application
+              Developments module at NIBM. Designed to eliminate high-risk manual dehusking, increase throughput, and
+              monitor production yields in real time.
+            </p>
+
+            <ul class="project-highlights">
+              <li><strong>Servo Guiding Unit:</strong> Metal gear servo motor swings coconuts steadily into spiked
+                husking rollers for consistent alignment.</li>
+              <li><strong>IR Yield Counter:</strong> Infrared obstacle sensor detects each de-husked coconut entering
+                the collection basket with debouncing logic.</li>
+              <li><strong>I2C Telemetry:</strong> LM016L 16x2 LCD display driven via PCF8574 expander showing real-time
+                coconut count and system operational states.</li>
+              <li><strong>Audio-Visual Safety:</strong> Multi-color status LEDs and buzzer alert operators of process
+                stages and full collection bins.</li>
+              <li><strong>Safety Isolation:</strong> Decoupled high-power external roller motor from low-voltage Arduino
+                microcontroller for maximum electrical safety.</li>
+            </ul>
+
+            <div class="project-tags">
+              <span class="project-tag">Arduino Uno</span>
+              <span class="project-tag">Embedded C++</span>
+              <span class="project-tag">IR Obstacle Sensor</span>
+              <span class="project-tag">Metal Gear Servo</span>
+              <span class="project-tag">PCF8574 I2C</span>
+              <span class="project-tag">16x2 LCD</span>
+              <span class="project-tag">Proteus Design</span>
+              <span class="project-tag">Hardware Prototyping</span>
+            </div>
+
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Robotics Coursework</span>
+              <div class="project-links-group">
+                <a href="https://github.com/Ramesha-Dasangi/CoconutHuskingSystem" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-github btn-sm">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub Repository
+                </a>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: CycloTrek Adventures (DIPLOMA FINAL PROJECT) -->
+        <div class="project-card" data-categories="featured web">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Full-Stack Web · Relational DBMS</span>
+            <span class="project-date">Diploma Capstone</span>
+          </div>
+          <div class="project-body">
+            <!-- Video Player Window -->
+            <div class="app-window-frame">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">CycloTrek Adventures • Web Portal Video</span>
               </div>
               <div class="window-content">
                 <video controls preload="metadata" playsinline>
@@ -1836,122 +2493,289 @@
               </div>
             </div>
 
-            <h3 class="project-title">CycloTrek Adventures — Booking & Fleet Management</h3>
+            <h3 class="project-title">CycloTrek Adventures — Tourism & Adventure Booking Platform</h3>
             <p class="project-summary">
-              A full-stack web booking portal designed for adventure tourism enterprises. Features role-based access control (RBAC), tour scheduling, equipment inventory management, and automated invoicing with a MySQL relational database back-end.
+              Developed as the Diploma in Software Engineering final capstone project at NIBM. A comprehensive web
+              portal designed to enhance tourism engagement and streamline business workflows by integrating activity
+              bookings, equipment purchasing, and tour management.
             </p>
+
+            <ul class="project-highlights">
+              <li><strong>Role-Based Access Control (RBAC):</strong> Granular interfaces for registered customers,
+                operations staff, and system administrators.</li>
+              <li><strong>Adventure & Gear Management:</strong> Real-time booking schedules, gear e-commerce shop, guide
+                assignments, and automated refund pipelines.</li>
+              <li><strong>Secure Session Management:</strong> Cookie and session-based state preservation with client
+                and server-side data validations.</li>
+              <li><strong>Reporting & Analytics:</strong> Automated financial and booking management reports for
+                business decision making.</li>
+            </ul>
+
             <div class="project-tags">
               <span class="project-tag">PHP</span>
               <span class="project-tag">MySQL</span>
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">Bootstrap 5</span>
               <span class="project-tag">HTML5/CSS3</span>
+              <span class="project-tag">UI/UX Design</span>
             </div>
+
             <div class="project-footer">
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Diploma Capstone Project</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Diploma Final Project</span>
               <div class="project-links-group">
-                <a href="https://github.com/Ramesha-Dasangi/CycloTrekAdventures-" target="_blank" rel="noopener noreferrer" class="project-link project-link-gh" title="View GitHub Repository">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  GitHub
+                <a href="https://github.com/Ramesha-Dasangi/CycloTrekAdventures-" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub Repository
                 </a>
-                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-cyclotrek">
-                  Overview
-                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Project 4: Supermarket Management -->
-        <div class="project-card">
+        <!-- PROJECT 6: Supermarket POS & Inventory Management System -->
+        <div class="project-card" data-categories="algorithms desktop">
           <div class="project-header-bar">
             <span class="project-category-tag">Java · Desktop & OOP</span>
-            <span class="project-date">Academic</span>
+            <span class="project-date">NIBM Academic</span>
           </div>
           <div class="project-body">
             <h3 class="project-title">Supermarket POS & Inventory Management System</h3>
             <p class="project-summary">
-              Java-based application applying Object-Oriented Programming (OOP) concepts — inheritance, encapsulation, abstraction, and polymorphism — to handle retail inventory catalogues, point-of-sale transactions, and persistent customer records.
+              Engineered a desktop application applying core Object-Oriented Programming (OOP) principles —
+              encapsulation, inheritance, polymorphism, and abstraction. Handles retail inventory catalogues,
+              point-of-sale customer billing, and persistent file-based records.
             </p>
+            <ul class="project-highlights">
+              <li>Implemented modular class hierarchies for products, transactions, and discount algorithms.</li>
+              <li>File handling mechanisms ensure persistent storage of receipts, ledger records, and customer accounts.
+              </li>
+            </ul>
             <div class="project-tags">
               <span class="project-tag">Java</span>
               <span class="project-tag">OOP</span>
-              <span class="project-tag">Data Structures</span>
-              <span class="project-tag">DBMS</span>
+              <span class="project-tag">File Handling</span>
+              <span class="project-tag">Software Design</span>
+              <span class="project-tag">Problem Solving</span>
             </div>
             <div class="project-footer">
               <span style="font-size: 0.8rem; color: var(--text-muted);">Java Academic Project</span>
-              <div class="project-links-group">
-                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-supermarket">
-                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  Details
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                </a>
-              </div>
+              <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 5: Hospital Management -->
-        <div class="project-card">
+        <!-- PROJECT 7: Hospital Management System -->
+        <div class="project-card" data-categories="algorithms desktop">
           <div class="project-header-bar">
-            <span class="project-category-tag">C Systems · Data Persistence</span>
-            <span class="project-date">Academic</span>
+            <span class="project-category-tag">C Systems · Structured Programming</span>
+            <span class="project-date">Programming Fundamentals</span>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Hospital Patient Record & Allocation System</h3>
+            <h3 class="project-title">Hospital Management System</h3>
             <p class="project-summary">
-              Structured systems software engineered in C focusing on memory management, pointers, and file persistence. Implements record indexing, doctor scheduling, and emergency bed allocation algorithms with detailed test documentation.
+              A console-based Hospital Management System developed in C for the Programming Fundamentals course. Manages
+              patient registration, doctor duty schedules, billing calculations, and emergency intake handling using
+              structured programming principles.
             </p>
+            <ul class="project-highlights">
+              <li>Applied memory management, structs, arrays, pointers, and selection/repetition flow control.</li>
+              <li>Persistent file handling for medical records and transaction audit logs.</li>
+            </ul>
             <div class="project-tags">
               <span class="project-tag">C Language</span>
               <span class="project-tag">Pointers</span>
               <span class="project-tag">File Handling</span>
+              <span class="project-tag">Data Management</span>
               <span class="project-tag">Algorithms</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.8rem; color: var(--text-muted);">C Systems Project</span>
-              <div class="project-links-group">
-                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-hospital">
-                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  Details
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                </a>
-              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">C Fundamentals Project</span>
+              <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 6: Network Infrastructure -->
-        <div class="project-card">
+        <!-- PROJECT 8: 4-Bit Binary Adder Circuit -->
+        <div class="project-card" data-categories="robotics">
           <div class="project-header-bar">
-            <span class="project-category-tag">Networking & Security</span>
-            <span class="project-date">Architecture</span>
+            <span class="project-category-tag">Digital Logic & Hardware</span>
+            <span class="project-date">Computer Organization</span>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Scalable Enterprise Network — EuroCall</h3>
+            <h3 class="project-title">4-Bit Binary Adder Circuit Implementation</h3>
             <p class="project-summary">
-              Architected a multi-tier network topology for a customer contact enterprise. Includes technical design specifications for VLAN segmentation, subnetting, Access Control Lists (ACLs), and link redundancy in Cisco Packet Tracer.
+              Designed and implemented a 4-bit binary adder using fundamental logic gates as part of the Digital Logic &
+              Computer Organization curriculum. The project involved constructing the circuit diagram, computing carry
+              bits, and verifying truth table outputs for diverse binary inputs.
             </p>
+            <ul class="project-highlights">
+              <li>Deepened understanding of binary arithmetic, digital circuit design, and hardware-level operations.
+              </li>
+              <li>Simulated and verified propagation delays, gate fan-out, and output integrity.</li>
+            </ul>
             <div class="project-tags">
-              <span class="project-tag">Networking</span>
-              <span class="project-tag">VLAN Design</span>
-              <span class="project-tag">Cisco Packet Tracer</span>
-              <span class="project-tag">ACL Security</span>
+              <span class="project-tag">Logic Circuit Design</span>
+              <span class="project-tag">Boolean Logic</span>
+              <span class="project-tag">Digital Systems</span>
+              <span class="project-tag">Circuit Simulation</span>
             </div>
             <div class="project-footer">
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Network Architecture</span>
-              <div class="project-links-group">
-                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="project-link" id="proj-link-network">
-                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  Details
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                </a>
-              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Hardware Architecture</span>
+              <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- PROJECT 9: Scalable Network Design for EuroCall -->
+        <div class="project-card" data-categories="desktop">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Networking & Infrastructure</span>
+            <span class="project-date">Cisco Packet Tracer</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Scalable & Fault-Tolerant Enterprise Network for EuroCall</h3>
+            <p class="project-summary">
+              Architected a secure, high-capacity multi-tier network topology for EuroCall, a rapidly growing contact
+              center in Colombo. Features centralized network monitoring, VLAN segmentation, Wi-Fi infrastructure
+              expansion, and Access Control Lists (ACLs).
+            </p>
+            <ul class="project-highlights">
+              <li>Boosted operational traffic capacity by 50% through optimized subnetting and load management.</li>
+              <li>Engineered redundant gateway links and disaster recovery measures to eliminate operational downtime
+                and minimize security threats.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Network Design</span>
+              <span class="project-tag">VLAN Segmentation</span>
+              <span class="project-tag">IP Management</span>
+              <span class="project-tag">Network Security</span>
+              <span class="project-tag">Fault Tolerance</span>
+              <span class="project-tag">Cisco Packet Tracer</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Enterprise Infrastructure</span>
+              <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 10: Online Retail Store Management System -->
+        <div class="project-card" data-categories="algorithms web">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Software Engineering & UML</span>
+            <span class="project-date">System Architecture</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Online Retail Store Management System (UML Analysis)</h3>
+            <p class="project-summary">
+              Conducted exhaustive system analysis and requirements engineering to design an Online Retail Store
+              platform managing products, customers, orders, and payment reconciliations.
+            </p>
+            <ul class="project-highlights">
+              <li>Identified core actors and authored functional and non-functional requirement specifications.</li>
+              <li>Engineered comprehensive UML artifacts: Use Case Diagrams, Class Hierarchies, and Sequence Diagrams to
+                model transactional lifecycle.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Software Engineering</span>
+              <span class="project-tag">UML Modeling</span>
+              <span class="project-tag">Use Case Diagrams</span>
+              <span class="project-tag">Class Diagrams</span>
+              <span class="project-tag">Sequence Diagrams</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Systems Engineering</span>
+              <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 11: Travel Agency System -->
+        <div class="project-card" data-categories="web">
+          <div class="project-header-bar">
+            <span class="project-category-tag">Database Engineering & ERD</span>
+            <span class="project-date">Data Management 1</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Travel Agency System (Conceptual Database Architecture)</h3>
+            <p class="project-summary">
+              Designed a robust conceptual and logical database architecture for a full-service Travel Agency as part of
+              the Data Management curriculum at NIBM.
+            </p>
+            <ul class="project-highlights">
+              <li>Constructed detailed Entity-Relationship Diagrams (ERDs) capturing customer itineraries, flight
+                bookings, and hotel packages.</li>
+              <li>Applied relational normalization (1NF through 3NF) to eliminate data redundancy and preserve
+                integrity.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Database Design</span>
+              <span class="project-tag">Conceptual Modeling</span>
+              <span class="project-tag">ERD</span>
+              <span class="project-tag">Normalization (3NF)</span>
+              <span class="project-tag">SQL Schema</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Database Systems</span>
+              <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1961,70 +2785,129 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Milestones</span>
-        <h2 class="section-heading">Education & Experience</h2>
-        <p class="section-lead">The academic foundation and practical experiences shaping my engineering path.</p>
+        <h2 class="section-heading">Education, Credentials & Experience</h2>
+        <p class="section-lead">The academic pathway, professional training, and mentorship experiences that shape my
+          technical foundation.</p>
       </div>
 
       <div class="journey-grid">
         <!-- Education Column -->
         <div>
           <h3 class="timeline-column-title">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            Education
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            Education & Qualifications
           </h3>
           <div class="timeline-list">
             <!-- HND -->
             <div class="timeline-item">
-              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
               <div class="timeline-card">
-                <div class="timeline-date">Jul 2024 – Present (Ongoing)</div>
-                <h4 class="timeline-role">Higher National Diploma in Software Engineering</h4>
-                <div class="timeline-place">National Institute of Business Management (NIBM) · Galle</div>
+                <div class="timeline-date">September 2025 – Present (Ongoing)</div>
+                <h4 class="timeline-role">Higher National Diploma in Software Engineering (HNDSE)</h4>
+                <div class="timeline-place">National Institute of Business Management (NIBM - Sri Lanka)</div>
                 <p class="timeline-desc">
-                  Advanced coursework in enterprise software architecture, mobile computing, applied machine learning, cloud databases, and capstone delivery.
+                  Advancing technical and professional proficiencies in enterprise architecture, native mobile
+                  computing, data structures & algorithms (PDSA), applied machine learning, robotics application
+                  developments, and large-scale capstone projects.
                 </p>
                 <div class="timeline-tags">
-                  <span class="timeline-tag">Java</span>
+                  <span class="timeline-tag">Java 17</span>
                   <span class="timeline-tag">Android Studio</span>
-                  <span class="timeline-tag">Python</span>
-                  <span class="timeline-tag">Scikit-Learn</span>
-                  <span class="timeline-tag">C#</span>
+                  <span class="timeline-tag">Algorithms & Big-O</span>
+                  <span class="timeline-tag">Machine Learning</span>
+                  <span class="timeline-tag">Robotics</span>
                 </div>
               </div>
             </div>
 
             <!-- Diploma -->
             <div class="timeline-item">
-              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
               <div class="timeline-card">
                 <div class="timeline-date">Completed · 2024</div>
-                <h4 class="timeline-role">Diploma in Software Engineering</h4>
-                <div class="timeline-place">National Institute of Business Management (NIBM) · Galle</div>
+                <h4 class="timeline-role">Diploma in Software Engineering (DSE)</h4>
+                <div class="timeline-place">National Institute of Business Management (NIBM - Sri Lanka)</div>
                 <p class="timeline-desc">
-                  Core fundamentals in algorithms, OOP principles, relational database design, and web architecture. Completed CycloTrek as the final capstone project.
+                  Successfully completed rigorous fundamental coursework in structured programming (C), Object-Oriented
+                  Programming (Java), relational databases (MySQL), web application engineering (PHP), and completed
+                  CycloTrek Adventures as the final capstone project.
                 </p>
                 <div class="timeline-tags">
-                  <span class="timeline-tag">Web Engineering</span>
                   <span class="timeline-tag">PHP & MySQL</span>
-                  <span class="timeline-tag">C</span>
-                  <span class="timeline-tag">OOP</span>
+                  <span class="timeline-tag">C Systems</span>
+                  <span class="timeline-tag">Java OOP</span>
+                  <span class="timeline-tag">Web Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- British Way English Academy -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-date">2022</div>
+                <h4 class="timeline-role">Advanced Certificate Course in English</h4>
+                <div class="timeline-place">British Way English Academy</div>
+                <p class="timeline-desc">
+                  Completed intensive training in professional English communication, technical presentation skills,
+                  writing clarity, and collaborative teamwork.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Professional Communication</span>
+                  <span class="timeline-tag">Technical English</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- INFONET COMPUTER SYSTEMS -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-date">Sep 2013 – Mar 2014</div>
+                <h4 class="timeline-role">Certificate Course in Information Technology</h4>
+                <div class="timeline-place">INFONET COMPUTER SYSTEMS (PVT) LTD.</div>
+                <p class="timeline-desc">
+                  Foundational education in computer systems, basic software tools, office productivity suites, and
+                  computer literacy.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Information Technology</span>
+                  <span class="timeline-tag">Computing Fundamentals</span>
                 </div>
               </div>
             </div>
 
             <!-- School -->
             <div class="timeline-item">
-              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
               <div class="timeline-card">
                 <div class="timeline-date">Secondary Education</div>
-                <h4 class="timeline-role">Sanghamitta Balika Vidyalaya</h4>
+                <h4 class="timeline-role">Sanghamitta Balika Vidyalaya, Galle</h4>
                 <div class="timeline-place">Galle, Southern Province, Sri Lanka</div>
                 <p class="timeline-desc">
-                  Developed strong mathematics and analytical foundation. Active member of the Astronomy Club and represented the school in Table Tennis.
+                  Developed strong mathematics, logical reasoning, and scientific curiosity.
+                  <br>• <strong>Astronomy Club:</strong> Active member participating in events, stargazing observation,
+                  and knowledge-sharing sessions.
+                  <br>• <strong>Table Tennis Player:</strong> Represented the school, cultivating resilience,
+                  discipline, sportsmanship, and teamwork.
                 </p>
                 <div class="timeline-tags">
                   <span class="timeline-tag">Astronomy Club</span>
-                  <span class="timeline-tag">Table Tennis</span>
+                  <span class="timeline-tag">Table Tennis Player</span>
+                  <span class="timeline-tag">Teamwork & Leadership</span>
                 </div>
               </div>
             </div>
@@ -2034,40 +2917,55 @@
         <!-- Experience Column -->
         <div>
           <h3 class="timeline-column-title">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
             Experience & Engagement
           </h3>
           <div class="timeline-list">
             <!-- Tutoring -->
             <div class="timeline-item">
-              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
               <div class="timeline-card">
-                <div class="timeline-date">Jan 2023 – Present · 3+ Years</div>
-                <h4 class="timeline-role">Mathematics & Logic Tutor</h4>
+                <div class="timeline-date">Jan 2023 – Present </div>
+                <h4 class="timeline-role">Mathematics Tutor</h4>
                 <div class="timeline-place">Freelance · Galle, Sri Lanka</div>
                 <p class="timeline-desc">
-                  Coached students in core mathematics, analytical problem solving, algebra, and geometry. Developed clarity in technical explanation and mentorship abilities.
+                  Coaching students in foundational and intermediate mathematics, analytical problem solving, logic, and
+                  algebra. Breaking down complex concepts into step-by-step methodologies, fostering self-confidence,
+                  patience, and clear technical communication skills.
                 </p>
                 <div class="timeline-tags">
                   <span class="timeline-tag">Analytical Thinking</span>
-                  <span class="timeline-tag">Technical Communication</span>
+                  <span class="timeline-tag">Problem Solving</span>
+                  <span class="timeline-tag">Mentorship</span>
+                  <span class="timeline-tag">Communication</span>
                 </div>
               </div>
             </div>
 
-            <!-- Internship Readiness -->
+            <!-- Career Focus -->
             <div class="timeline-item">
-              <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
               <div class="timeline-card">
-                <div class="timeline-date">Career Focus</div>
-                <h4 class="timeline-role">Seeking Software Engineering Internship</h4>
-                <div class="timeline-place">Remote / On-site (Sri Lanka)</div>
+                <div class="timeline-date">Current Objective</div>
+                <h4 class="timeline-role">Aspiring Software Developer / Intern</h4>
+                <div class="timeline-place">Open to Remote & On-Site Roles (Sri Lanka & Global)</div>
                 <p class="timeline-desc">
-                  Actively seeking internship opportunities to contribute technical skills across software engineering, mobile development, or applied ML to a production engineering team.
+                  Eager to join high-performing engineering teams as a Software Engineering Intern. Committed to writing
+                  clean, maintainable code across Java backends, Android applications, web platforms, and applied data
+                  solutions while expanding production knowledge.
                 </p>
                 <div class="timeline-tags">
-                  <span class="timeline-tag">Open to Opportunities</span>
-                  <span class="timeline-tag">Internship</span>
+                  <span class="timeline-tag">Java Development</span>
+                  <span class="timeline-tag">Android Apps</span>
+                  <span class="timeline-tag">Full-Stack Web</span>
+                  <span class="timeline-tag">Open for Hire</span>
                 </div>
               </div>
             </div>
@@ -2082,17 +2980,22 @@
     <div class="container">
       <div class="contact-card-box">
         <div class="contact-left">
-          <span class="section-tag">Connect</span>
-          <h3>Looking for an enthusiastic engineering intern?</h3>
+          <span class="section-tag">Get In Touch</span>
+          <h3>Looking for an enthusiastic, skilled software engineering intern?</h3>
           <p>
-            I am always open to discussing software engineering opportunities, collaborative project ideas, or industry mentorship. Feel free to connect via LinkedIn, GitHub, or send a direct message.
+            I am always open to discussing software development internships, innovative collaborations, project ideas,
+            or networking with professionals in the technology industry. Feel free to connect via LinkedIn, GitHub, or
+            send a direct email inquiry.
           </p>
 
           <div class="contact-methods">
             <!-- Email -->
             <a href="mailto:rameshadasangi4@gmail.com" class="contact-item" id="contact-email-link">
               <div class="contact-icon" style="background-color: #fee2e2; color: #dc2626;">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">Direct Email</span>
@@ -2101,9 +3004,13 @@
             </a>
 
             <!-- GitHub -->
-            <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-github-link">
+            <a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer" class="contact-item"
+              id="contact-github-link">
               <div class="contact-icon contact-icon-gh">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">GitHub</span>
@@ -2112,9 +3019,13 @@
             </a>
 
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-linkedin-link">
+            <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+              class="contact-item" id="contact-linkedin-link">
               <div class="contact-icon contact-icon-li">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">LinkedIn Profile</span>
@@ -2124,7 +3035,10 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
               </div>
               <div class="contact-details">
                 <span class="contact-label">Location</span>
@@ -2136,23 +3050,27 @@
 
         <div>
           <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
-            <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 14px;">Send a Direct Message</h4>
+            <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 14px;">
+              Send a Direct Message</h4>
             <div class="form-group">
               <label class="form-label" for="form-name">Your Name</label>
-              <input type="text" id="form-name" class="form-input" placeholder="e.g. Priyantha Silva" required />
+              <input type="text" id="form-name" class="form-input" placeholder="Your full name" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="form-email">Your Email</label>
-              <input type="email" id="form-email" class="form-input" placeholder="e.g. priyantha@company.com" required />
+              <input type="email" id="form-email" class="form-input" placeholder="Your email address" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="form-message">Message</label>
-              <textarea id="form-message" class="form-textarea" placeholder="Hello Ramesha, I reviewed your projects and would like to discuss an opportunity..." required></textarea>
+              <textarea id="form-message" class="form-textarea" placeholder="Write your message here..."
+                required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;" id="form-submit-btn">
               Send Message
             </button>
-            <div id="form-feedback" style="display:none; margin-top:12px; font-size:0.84rem; text-align:center; padding: 8px; border-radius: var(--radius-sm);"></div>
+            <div id="form-feedback"
+              style="display:none; margin-top:12px; font-size:0.84rem; text-align:center; padding: 8px; border-radius: var(--radius-sm);">
+            </div>
           </form>
         </div>
       </div>
@@ -2169,7 +3087,8 @@
         <li><a href="#hero">Back to top ↑</a></li>
         <li><a href="mailto:rameshadasangi4@gmail.com">Email</a></li>
         <li><a href="https://github.com/Ramesha-Dasangi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -2190,19 +3109,37 @@
       });
     }
 
-    // ML Project Gallery Switcher
-    function switchTigriImg(imgSrc, btn) {
-      const img = document.getElementById('tigri-main-img');
+    // Generic Gallery Switcher (Works independently for RouteWise, Tigri ML, and Coconut Robotics)
+    function switchGalleryImg(imgId, imgSrc, btn) {
+      const img = document.getElementById(imgId);
       if (img) {
-        img.style.opacity = '0.3';
+        img.style.opacity = '0.25';
         setTimeout(() => {
           img.src = imgSrc;
           img.style.opacity = '1';
-        }, 150);
+        }, 140);
       }
-      const buttons = document.querySelectorAll('.gallery-nav-btn');
-      buttons.forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('.gallery-nav-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    }
+
+    // Project Category Filtering
+    function filterProjects(category, btn) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const cats = card.getAttribute('data-categories') || '';
+        if (category === 'all' || cats.includes(category)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
     }
 
     // Contact Form Handler
@@ -2213,10 +3150,10 @@
       const message = document.getElementById('form-message').value;
       const feedback = document.getElementById('form-feedback');
 
-      const recipient = "rameshadasangi4@gmail.com";
+      const recipient = 'rameshadasangi4@gmail.com';
       const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
       const body = encodeURIComponent(`Name: ${name}\nSender Email: ${email}\n\nMessage:\n${message}`);
-      
+
       feedback.style.display = 'block';
       feedback.style.backgroundColor = '#ecfdf5';
       feedback.style.color = '#059669';
@@ -2225,8 +3162,9 @@
 
       setTimeout(() => {
         window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-      }, 800);
+      }, 700);
     }
   </script>
 </body>
+
 </html>
