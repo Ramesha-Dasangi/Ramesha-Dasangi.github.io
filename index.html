@@ -972,9 +972,11 @@
       .project-body {
         padding: 14px;
       }
+
       .project-header-bar {
         padding: 8px 12px;
       }
+
       .project-links-group {
         flex-wrap: wrap;
         gap: 8px;
@@ -1798,7 +1800,7 @@
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
-            <div class="stat-number">11+</div>
+            <div class="stat-number">12+</div>
             <div class="stat-label">Engineered Projects</div>
             <div class="stat-desc">Java, ML, Android, Robotics, Web & Systems</div>
           </div>
@@ -2057,7 +2059,7 @@
 
       <!-- Category Filter Tabs -->
       <div class="project-filter-tabs">
-        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (11)</button>
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (12)</button>
         <button class="filter-btn" onclick="filterProjects('featured', this)">★ Flagship Work</button>
         <button class="filter-btn" onclick="filterProjects('algorithms', this)">Desktop & Algorithms</button>
         <button class="filter-btn" onclick="filterProjects('ml', this)">Machine Learning</button>
@@ -2572,7 +2574,87 @@
           </div>
         </div>
 
-        <!-- PROJECT 6: Supermarket POS & Inventory Management System -->
+        <!-- PROJECT 6: Smart Tourist Group Tracking & Communication System (HNDSE IOT & MOBILE) -->
+        <div class="project-card" data-categories="featured robotics mobile">
+          <div class="project-header-bar">
+            <span class="project-category-tag">IoT & Mobile Systems · HNDSE Project</span>
+            <span class="project-date">ESP8266 · Flutter · Firebase</span>
+          </div>
+          <div class="project-body">
+            <!-- Gallery Window -->
+            <div class="app-window-frame">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">Smart Tourist Tracker • Hardware & 3D Model</span>
+              </div>
+              <div class="window-content">
+                <img id="tourist-tracker-img" src="IoT 1.jpg" alt="Smart Tourist Tracker 3D Model" />
+              </div>
+            </div>
+
+            <!-- Gallery Buttons -->
+            <div class="gallery-nav-bar">
+              <button type="button" class="gallery-nav-btn active"
+                onclick="switchGalleryImg('tourist-tracker-img', 'IoT 1.jpg', this)">3D Device Design</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('tourist-tracker-img', 'IoT 2.jpg', this)">Hardware Enclosure</button>
+              <button type="button" class="gallery-nav-btn"
+                onclick="switchGalleryImg('tourist-tracker-img', 'IoT 3.jpg', this)">Prototype View</button>
+            </div>
+
+            <h3 class="project-title">Smart Tourist Group Tracking & Communication System</h3>
+            <p class="project-summary">
+              An intelligent IoT and mobile solution engineered to enhance tourist safety and tour group management. Combines a custom wearable hardware device powered by an ESP8266 NodeMCU microcontroller, NEO-6M GPS receiver, and I2C OLED display with a cross-platform Flutter application for real-time geolocation tracking and emergency alerts.
+            </p>
+
+            <ul class="project-highlights">
+              <li><strong>Wearable IoT Hardware:</strong> Built around an ESP8266 NodeMCU 12E, NEO-6M GPS module, 0.96" I2C OLED display, and instant push-button SOS emergency buzzer.</li>
+              <li><strong>Live Cloud Telemetry:</strong> Continuously streams GPS coordinates (latitude, longitude) to Firebase Realtime Database over Wi-Fi.</li>
+              <li><strong>Flutter Mobile App:</strong> Interactive real-time mapping for tour guides and tourists, live proximity tracking, and emergency tourist-to-guide navigation.</li>
+              <li><strong>Automated Group Safety:</strong> Proactively detects group separation, issues instant separation warnings, and allows rapid SOS signal transmission to guides.</li>
+            </ul>
+
+            <div class="project-tags">
+              <span class="project-tag">ESP8266</span>
+              <span class="project-tag">NodeMCU 12E</span>
+              <span class="project-tag">NEO-6M GPS</span>
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">Firebase Realtime DB</span>
+              <span class="project-tag">Embedded C++</span>
+              <span class="project-tag">OLED SSD1306</span>
+              <span class="project-tag">TinyGPS++</span>
+            </div>
+
+            <div class="project-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">HNDSE IoT Project</span>
+              <div class="project-links-group">
+                <a href="https://github.com/Ramesha-Dasangi/tourist_safety_app" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-github btn-sm">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub Repository
+                </a>
+                <a href="https://www.linkedin.com/in/ramesha-dasangi" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-linkedin btn-sm" title="View Project on LinkedIn">
+                  <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 7: Supermarket POS & Inventory Management System -->
         <div class="project-card" data-categories="algorithms desktop">
           <div class="project-header-bar">
             <span class="project-category-tag">Java · Desktop & OOP</span>
@@ -2611,7 +2693,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 7: Hospital Management System -->
+        <!-- PROJECT 8: Hospital Management System -->
         <div class="project-card" data-categories="algorithms desktop">
           <div class="project-header-bar">
             <span class="project-category-tag">C Systems · Structured Programming</span>
@@ -2649,7 +2731,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 8: 4-Bit Binary Adder Circuit -->
+        <!-- PROJECT 9: 4-Bit Binary Adder Circuit -->
         <div class="project-card" data-categories="robotics">
           <div class="project-header-bar">
             <span class="project-category-tag">Digital Logic & Hardware</span>
@@ -2687,7 +2769,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 9: Scalable Network Design for EuroCall -->
+        <!-- PROJECT 10: Scalable Network Design for EuroCall -->
         <div class="project-card" data-categories="desktop">
           <div class="project-header-bar">
             <span class="project-category-tag">Networking & Infrastructure</span>
@@ -2727,7 +2809,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 10: Online Retail Store Management System -->
+        <!-- PROJECT 11: Online Retail Store Management System -->
         <div class="project-card" data-categories="algorithms web">
           <div class="project-header-bar">
             <span class="project-category-tag">Software Engineering & UML</span>
@@ -2765,7 +2847,7 @@
           </div>
         </div>
 
-        <!-- PROJECT 11: Travel Agency System -->
+        <!-- PROJECT 12: Travel Agency System -->
         <div class="project-card" data-categories="web">
           <div class="project-header-bar">
             <span class="project-category-tag">Database Engineering & ERD</span>
@@ -2872,6 +2954,31 @@
                   <span class="timeline-tag">C Systems</span>
                   <span class="timeline-tag">Java OOP</span>
                   <span class="timeline-tag">Web Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- University of Moratuwa CODL -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-marker-inner"></div>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-date">October 2023 · Verified Certificate</div>
+                <h4 class="timeline-role">Python for Beginners</h4>
+                <div class="timeline-place">Centre for Open & Distance Learning (CODL) · University of Moratuwa</div>
+                <p class="timeline-desc">
+                  Successfully completed the online learning programme in Python for Beginners conducted by the Department of Computer Science & Engineering, Faculty of Engineering, University of Moratuwa.
+                </p>
+                <div style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                  Verification Code: <strong style="color:var(--text-main);">Dy0Mcv1axp</strong> · 
+                  <a href="https://open.uom.lk/verify" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:600; text-decoration:none;">Verify Online ↗</a>
+                </div>
+                <div class="timeline-tags" style="margin-top: 8px;">
+                  <span class="timeline-tag">Python</span>
+                  <span class="timeline-tag">University of Moratuwa</span>
+                  <span class="timeline-tag">CODL</span>
+                  <span class="timeline-tag">Programming Fundamentals</span>
                 </div>
               </div>
             </div>
